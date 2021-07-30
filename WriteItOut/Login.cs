@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WriteItOut
 {
@@ -34,6 +35,23 @@ namespace WriteItOut
 
         private void Login_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void CreateNewAcctBtn_Click(object sender, EventArgs e)
+        {
+            RegisterForm registration = new RegisterForm();
+            registration.ShowDialog();
+            Visible = false;
+        }
+
+        private void SignInBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con =new SqlConnection("Data Source=DESKTOP-4S8A66J;SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("select * from login where username='"+UsernameTxtBox.Text+"' and password='"+PasswordTxtBox.Text+"'", con);
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sqlData.Fill(dt);
 
         }
     }

@@ -36,8 +36,8 @@ namespace WriteItOut
             this.SignInBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PasswordField = new System.Windows.Forms.TextBox();
-            this.UsernameField = new System.Windows.Forms.TextBox();
+            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
+            this.UsernameTxtBox = new System.Windows.Forms.TextBox();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
@@ -80,6 +80,7 @@ namespace WriteItOut
             this.CreateNewAcctBtn.TabIndex = 19;
             this.CreateNewAcctBtn.Text = "Create New Account";
             this.CreateNewAcctBtn.UseVisualStyleBackColor = false;
+            this.CreateNewAcctBtn.Click += new System.EventHandler(this.CreateNewAcctBtn_Click);
             // 
             // SignInBtn
             // 
@@ -93,6 +94,7 @@ namespace WriteItOut
             this.SignInBtn.TabIndex = 18;
             this.SignInBtn.Text = "Sign In";
             this.SignInBtn.UseVisualStyleBackColor = false;
+            this.SignInBtn.Click += new System.EventHandler(this.SignInBtn_Click);
             // 
             // panel2
             // 
@@ -112,31 +114,31 @@ namespace WriteItOut
             this.panel1.Size = new System.Drawing.Size(267, 1);
             this.panel1.TabIndex = 16;
             // 
-            // PasswordField
+            // PasswordTxtBox
             // 
-            this.PasswordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.PasswordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordField.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordField.ForeColor = System.Drawing.Color.White;
-            this.PasswordField.Location = new System.Drawing.Point(76, 234);
-            this.PasswordField.Margin = new System.Windows.Forms.Padding(4);
-            this.PasswordField.Name = "PasswordField";
-            this.PasswordField.PasswordChar = '*';
-            this.PasswordField.Size = new System.Drawing.Size(321, 19);
-            this.PasswordField.TabIndex = 15;
-            this.PasswordField.UseSystemPasswordChar = true;
+            this.PasswordTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
+            this.PasswordTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordTxtBox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTxtBox.ForeColor = System.Drawing.Color.White;
+            this.PasswordTxtBox.Location = new System.Drawing.Point(76, 234);
+            this.PasswordTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PasswordTxtBox.Name = "PasswordTxtBox";
+            this.PasswordTxtBox.PasswordChar = '*';
+            this.PasswordTxtBox.Size = new System.Drawing.Size(321, 20);
+            this.PasswordTxtBox.TabIndex = 15;
+            this.PasswordTxtBox.UseSystemPasswordChar = true;
             // 
-            // UsernameField
+            // UsernameTxtBox
             // 
-            this.UsernameField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.UsernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernameField.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameField.ForeColor = System.Drawing.Color.White;
-            this.UsernameField.Location = new System.Drawing.Point(76, 157);
-            this.UsernameField.Margin = new System.Windows.Forms.Padding(4);
-            this.UsernameField.Name = "UsernameField";
-            this.UsernameField.Size = new System.Drawing.Size(321, 19);
-            this.UsernameField.TabIndex = 14;
+            this.UsernameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
+            this.UsernameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsernameTxtBox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTxtBox.ForeColor = System.Drawing.Color.White;
+            this.UsernameTxtBox.Location = new System.Drawing.Point(76, 157);
+            this.UsernameTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.UsernameTxtBox.Name = "UsernameTxtBox";
+            this.UsernameTxtBox.Size = new System.Drawing.Size(321, 20);
+            this.UsernameTxtBox.TabIndex = 14;
             // 
             // CloseBtn
             // 
@@ -188,8 +190,8 @@ namespace WriteItOut
             this.Controls.Add(this.SignInBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PasswordField);
-            this.Controls.Add(this.UsernameField);
+            this.Controls.Add(this.PasswordTxtBox);
+            this.Controls.Add(this.UsernameTxtBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -209,8 +211,8 @@ namespace WriteItOut
         private System.Windows.Forms.Button SignInBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox PasswordField;
-        private System.Windows.Forms.TextBox UsernameField;
+        private System.Windows.Forms.TextBox PasswordTxtBox;
+        private System.Windows.Forms.TextBox UsernameTxtBox;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button CloseBtn;
         private System.Windows.Forms.Button MinimizeBtn;
