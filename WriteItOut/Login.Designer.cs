@@ -29,18 +29,17 @@ namespace WriteItOut
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.UsernameLbl = new System.Windows.Forms.Label();
             this.PasswordLbl = new System.Windows.Forms.Label();
-            this.CreateNewAccountBtn = new System.Windows.Forms.Button();
+            this.CreateNewAcctBtn = new System.Windows.Forms.Button();
             this.SignInBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PasswordField = new System.Windows.Forms.TextBox();
             this.UsernameField = new System.Windows.Forms.TextBox();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
+            this.logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,17 +63,17 @@ namespace WriteItOut
             this.PasswordLbl.TabIndex = 20;
             this.PasswordLbl.Text = "Password:";
             // 
-            // CreateNewAccountBtn
+            // CreateNewAcctBtn
             // 
-            this.CreateNewAccountBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.CreateNewAccountBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CreateNewAccountBtn.Location = new System.Drawing.Point(76, 348);
-            this.CreateNewAccountBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.CreateNewAccountBtn.Name = "CreateNewAccountBtn";
-            this.CreateNewAccountBtn.Size = new System.Drawing.Size(267, 38);
-            this.CreateNewAccountBtn.TabIndex = 19;
-            this.CreateNewAccountBtn.Text = "Create New Account";
-            this.CreateNewAccountBtn.UseVisualStyleBackColor = false;
+            this.CreateNewAcctBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.CreateNewAcctBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateNewAcctBtn.Location = new System.Drawing.Point(76, 348);
+            this.CreateNewAcctBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CreateNewAcctBtn.Name = "CreateNewAcctBtn";
+            this.CreateNewAcctBtn.Size = new System.Drawing.Size(267, 38);
+            this.CreateNewAcctBtn.TabIndex = 19;
+            this.CreateNewAcctBtn.Text = "Create New Account";
+            this.CreateNewAcctBtn.UseVisualStyleBackColor = false;
             // 
             // SignInBtn
             // 
@@ -115,6 +114,7 @@ namespace WriteItOut
             this.PasswordField.Location = new System.Drawing.Point(76, 234);
             this.PasswordField.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordField.Name = "PasswordField";
+            this.PasswordField.PasswordChar = '*';
             this.PasswordField.Size = new System.Drawing.Size(321, 19);
             this.PasswordField.TabIndex = 15;
             this.PasswordField.UseSystemPasswordChar = true;
@@ -130,36 +130,40 @@ namespace WriteItOut
             this.UsernameField.Size = new System.Drawing.Size(321, 19);
             this.UsernameField.TabIndex = 14;
             // 
-            // logo
-            // 
-            this.logo.BackColor = System.Drawing.Color.White;
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.Location = new System.Drawing.Point(13, 13);
-            this.logo.Margin = new System.Windows.Forms.Padding(4);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(67, 64);
-            this.logo.TabIndex = 22;
-            this.logo.TabStop = false;
-            // 
             // CloseBtn
             // 
             this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
             this.CloseBtn.Location = new System.Drawing.Point(380, 13);
             this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.Size = new System.Drawing.Size(28, 38);
             this.CloseBtn.TabIndex = 24;
             this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // MinimizeBtn
             // 
             this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeBtn.Image = global::WriteItOut.Properties.Resources.minimize_icon3;
             this.MinimizeBtn.Location = new System.Drawing.Point(350, 13);
             this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBtn.Name = "MinimizeBtn";
             this.MinimizeBtn.Size = new System.Drawing.Size(28, 38);
             this.MinimizeBtn.TabIndex = 23;
             this.MinimizeBtn.UseVisualStyleBackColor = true;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
+            // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.BackgroundImage = global::WriteItOut.Properties.Resources.WriteItOutLogo3;
+            this.logo.Location = new System.Drawing.Point(13, 13);
+            this.logo.Margin = new System.Windows.Forms.Padding(4);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(85, 79);
+            this.logo.TabIndex = 22;
+            this.logo.TabStop = false;
             // 
             // Login
             // 
@@ -172,7 +176,7 @@ namespace WriteItOut
             this.Controls.Add(this.logo);
             this.Controls.Add(this.UsernameLbl);
             this.Controls.Add(this.PasswordLbl);
-            this.Controls.Add(this.CreateNewAccountBtn);
+            this.Controls.Add(this.CreateNewAcctBtn);
             this.Controls.Add(this.SignInBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -192,7 +196,7 @@ namespace WriteItOut
 
         private System.Windows.Forms.Label UsernameLbl;
         private System.Windows.Forms.Label PasswordLbl;
-        private System.Windows.Forms.Button CreateNewAccountBtn;
+        private System.Windows.Forms.Button CreateNewAcctBtn;
         private System.Windows.Forms.Button SignInBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
