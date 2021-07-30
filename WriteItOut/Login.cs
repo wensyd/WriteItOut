@@ -47,11 +47,22 @@ namespace WriteItOut
 
         private void SignInBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con =new SqlConnection("Data Source=DESKTOP-4S8A66J;SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
+            SqlConnection con = sqlConnection;
             SqlCommand cmd = new SqlCommand("select * from login where username='"+UsernameTxtBox.Text+"' and password='"+PasswordTxtBox.Text+"'", con);
             SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sqlData.Fill(dt);
+            if(dt.Rows.Count == 1)
+            {
+                Home Home = new Home();
+
+                this.Hide();
+
+                Home.Show();
+
+
+            }
 
         }
     }
