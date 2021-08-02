@@ -63,6 +63,26 @@ namespace WriteItOut.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BoardIcon {
+            get {
+                object obj = ResourceManager.GetObject("BoardIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChallengesIcon {
+            get {
+                object obj = ResourceManager.GetObject("ChallengesIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_icon__2_ {
             get {
                 object obj = ResourceManager.GetObject("Close_icon__2_", resourceCulture);
@@ -76,6 +96,46 @@ namespace WriteItOut.Properties {
         internal static System.Drawing.Bitmap minimize_icon3 {
             get {
                 object obj = ResourceManager.GetObject("minimize_icon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap penIcon {
+            get {
+                object obj = ResourceManager.GetObject("penIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QuotesIcon {
+            get {
+                object obj = ResourceManager.GetObject("QuotesIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchIcon {
+            get {
+                object obj = ResourceManager.GetObject("searchIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchIcon2 {
+            get {
+                object obj = ResourceManager.GetObject("searchIcon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

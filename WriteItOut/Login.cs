@@ -36,34 +36,53 @@ namespace WriteItOut
         private void Login_Load(object sender, EventArgs e)
         {
 
+            SqlConnection con = new SqlConnection(@"Data Source=
+            DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
+            con.Open();
         }
 
         private void CreateNewAcctBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             RegisterForm registration = new RegisterForm();
             registration.ShowDialog();
-            Visible = false;
+           
         }
 
         private void SignInBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
-            SqlConnection con = sqlConnection;
-            SqlCommand cmd = new SqlCommand("select * from login where username='"+UsernameTxtBox.Text+"' and password='"+PasswordTxtBox.Text+"'", con);
-            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sqlData.Fill(dt);
-            if(dt.Rows.Count == 1)
+            if (PasswordTxtBox.Text != string.Empty || UsernameTxtBox.Text != string.Empty)
             {
-                Home Home = new Home();
+                SqlCommand cmd = new SqlCommand();
+                SqlConnection con = new SqlConnection(@"Data Source=
+            DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
+                con.Open();
+                cmd = new SqlCommand("select * from Login where username='" + UsernameTxtBox.Text + "' and password='" + PasswordTxtBox.Text + "'", con);
+                SqlDataReader  dr= cmd.ExecuteReader();
+                
+                if (dr.Read())
+                {
+                    dr.Close();
+                    this.Hide();
+                    Home Home = new Home();
+                    Home.ShowDialog();
+                }
 
-                this.Hide();
+                else
+                {
+                    dr.Close();
+                    MessageBox.Show("Account is not available with this username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-                Home.Show();
+            }
 
-
+            else
+            {
+                MessageBox.Show("Invalid Username or Password");
             }
 
         }
     }
 }
+    
+

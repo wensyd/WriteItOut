@@ -30,56 +30,22 @@ namespace WriteItOut
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.CloseBtn = new System.Windows.Forms.Button();
-            this.MinimizeBtn = new System.Windows.Forms.Button();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.CloseBtn = new System.Windows.Forms.Button();
+            this.MinimizeBtn = new System.Windows.Forms.Button();
+            this.JournalBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.searchEntriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChallengeBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.exploreChallengesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QuoteBtn = new System.Windows.Forms.ToolStripButton();
+            this.VisionBoardBtn = new System.Windows.Forms.ToolStripButton();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
-            this.CloseBtn.Location = new System.Drawing.Point(1084, 13);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
-            this.CloseBtn.TabIndex = 26;
-            this.CloseBtn.UseVisualStyleBackColor = true;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
-            // 
-            // MinimizeBtn
-            // 
-            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimizeBtn.Image = global::WriteItOut.Properties.Resources.minimize_icon3;
-            this.MinimizeBtn.Location = new System.Drawing.Point(1054, 13);
-            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(28, 38);
-            this.MinimizeBtn.TabIndex = 25;
-            this.MinimizeBtn.UseVisualStyleBackColor = true;
-            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
-            // 
-            // logo
-            // 
-            this.logo.BackColor = System.Drawing.Color.Transparent;
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.Location = new System.Drawing.Point(4, 12);
-            this.logo.Margin = new System.Windows.Forms.Padding(4);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(85, 79);
-            this.logo.TabIndex = 27;
-            this.logo.TabStop = false;
             // 
             // panel1
             // 
@@ -109,75 +75,123 @@ namespace WriteItOut
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton7,
-            this.toolStripButton4,
-            this.toolStripButton6,
-            this.toolStripButton5});
+            this.JournalBtn,
+            this.ChallengeBtn,
+            this.QuoteBtn,
+            this.VisionBoardBtn});
             this.toolStrip1.Location = new System.Drawing.Point(215, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(910, 80);
             this.toolStrip1.TabIndex = 29;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // CloseBtn
             // 
-            this.toolStripButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(84, 77);
-            this.toolStripButton1.Text = "My Journal";
-            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
+            this.CloseBtn.Location = new System.Drawing.Point(1084, 13);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
+            this.CloseBtn.TabIndex = 26;
+            this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
-            // toolStripButton4
+            // MinimizeBtn
             // 
-            this.toolStripButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(139, 77);
-            this.toolStripButton4.Text = "Explore Challenges";
-            this.toolStripButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeBtn.Image = global::WriteItOut.Properties.Resources.minimize_icon3;
+            this.MinimizeBtn.Location = new System.Drawing.Point(1054, 13);
+            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBtn.Name = "MinimizeBtn";
+            this.MinimizeBtn.Size = new System.Drawing.Size(28, 38);
+            this.MinimizeBtn.TabIndex = 25;
+            this.MinimizeBtn.UseVisualStyleBackColor = true;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
-            // toolStripButton5
+            // JournalBtn
             // 
-            this.toolStripButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(97, 77);
-            this.toolStripButton5.Text = "Vision Board";
-            this.toolStripButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.JournalBtn.AutoSize = false;
+            this.JournalBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchEntriesToolStripMenuItem});
+            this.JournalBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.JournalBtn.Image = global::WriteItOut.Properties.Resources.penIcon;
+            this.JournalBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.JournalBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.JournalBtn.Name = "JournalBtn";
+            this.JournalBtn.Size = new System.Drawing.Size(130, 77);
+            this.JournalBtn.Text = "My Journal";
+            this.JournalBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.JournalBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.JournalBtn.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // toolStripButton6
+            // searchEntriesToolStripMenuItem
             // 
-            this.toolStripButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(130, 77);
-            this.toolStripButton6.Text = "Quote of The Day";
-            this.toolStripButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.searchEntriesToolStripMenuItem.Name = "searchEntriesToolStripMenuItem";
+            this.searchEntriesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.searchEntriesToolStripMenuItem.Text = "Search Entries";
             // 
-            // toolStripButton7
+            // ChallengeBtn
             // 
-            this.toolStripButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(109, 77);
-            this.toolStripButton7.Text = "My Challenges";
-            this.toolStripButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ChallengeBtn.AutoSize = false;
+            this.ChallengeBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exploreChallengesToolStripMenuItem});
+            this.ChallengeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ChallengeBtn.Image = global::WriteItOut.Properties.Resources.ChallengesIcon;
+            this.ChallengeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ChallengeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ChallengeBtn.Name = "ChallengeBtn";
+            this.ChallengeBtn.Size = new System.Drawing.Size(130, 77);
+            this.ChallengeBtn.Text = "My Challenges";
+            this.ChallengeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ChallengeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // exploreChallengesToolStripMenuItem
+            // 
+            this.exploreChallengesToolStripMenuItem.Name = "exploreChallengesToolStripMenuItem";
+            this.exploreChallengesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exploreChallengesToolStripMenuItem.Text = "Explore Challenges";
+            // 
+            // QuoteBtn
+            // 
+            this.QuoteBtn.AutoSize = false;
+            this.QuoteBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.QuoteBtn.Image = global::WriteItOut.Properties.Resources.QuotesIcon;
+            this.QuoteBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.QuoteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.QuoteBtn.Name = "QuoteBtn";
+            this.QuoteBtn.Size = new System.Drawing.Size(130, 77);
+            this.QuoteBtn.Text = "Quote of The Day";
+            this.QuoteBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.QuoteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // VisionBoardBtn
+            // 
+            this.VisionBoardBtn.AutoSize = false;
+            this.VisionBoardBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.VisionBoardBtn.Image = global::WriteItOut.Properties.Resources.BoardIcon;
+            this.VisionBoardBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.VisionBoardBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.VisionBoardBtn.Name = "VisionBoardBtn";
+            this.VisionBoardBtn.Size = new System.Drawing.Size(130, 77);
+            this.VisionBoardBtn.Text = "Vision Board";
+            this.VisionBoardBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.VisionBoardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.Location = new System.Drawing.Point(4, 12);
+            this.logo.Margin = new System.Windows.Forms.Padding(4);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(85, 79);
+            this.logo.TabIndex = 27;
+            this.logo.TabStop = false;
             // 
             // Home
             // 
@@ -194,10 +208,10 @@ namespace WriteItOut
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,10 +224,11 @@ namespace WriteItOut
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton QuoteBtn;
+        private System.Windows.Forms.ToolStripButton VisionBoardBtn;
+        private System.Windows.Forms.ToolStripDropDownButton JournalBtn;
+        private System.Windows.Forms.ToolStripMenuItem searchEntriesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton ChallengeBtn;
+        private System.Windows.Forms.ToolStripMenuItem exploreChallengesToolStripMenuItem;
     }
 }

@@ -39,9 +39,10 @@ namespace WriteItOut
             this.UsernameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ConfirmTxtBox = new System.Windows.Forms.TextBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.CloseBtn = new System.Windows.Forms.Button();
+            this.LogInLink = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +82,7 @@ namespace WriteItOut
             this.CreateNewAcctBtn.TabIndex = 27;
             this.CreateNewAcctBtn.Text = "Create New Account";
             this.CreateNewAcctBtn.UseVisualStyleBackColor = false;
+            this.CreateNewAcctBtn.Click += new System.EventHandler(this.CreateNewAcctBtn_Click);
             // 
             // panel2
             // 
@@ -147,17 +149,17 @@ namespace WriteItOut
             this.panel3.Size = new System.Drawing.Size(267, 1);
             this.panel3.TabIndex = 31;
             // 
-            // textBox1
+            // ConfirmTxtBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(73, 327);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 19);
-            this.textBox1.TabIndex = 30;
+            this.ConfirmTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
+            this.ConfirmTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmTxtBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmTxtBox.ForeColor = System.Drawing.Color.White;
+            this.ConfirmTxtBox.Location = new System.Drawing.Point(73, 327);
+            this.ConfirmTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ConfirmTxtBox.Name = "ConfirmTxtBox";
+            this.ConfirmTxtBox.Size = new System.Drawing.Size(321, 19);
+            this.ConfirmTxtBox.TabIndex = 30;
             // 
             // logo
             // 
@@ -182,17 +184,31 @@ namespace WriteItOut
             this.CloseBtn.UseVisualStyleBackColor = true;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
+            // LogInLink
+            // 
+            this.LogInLink.AutoSize = true;
+            this.LogInLink.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.LogInLink.Location = new System.Drawing.Point(293, 22);
+            this.LogInLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LogInLink.Name = "LogInLink";
+            this.LogInLink.Size = new System.Drawing.Size(47, 17);
+            this.LogInLink.TabIndex = 35;
+            this.LogInLink.TabStop = true;
+            this.LogInLink.Text = "Log in";
+            this.LogInLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogInLink_LinkClicked);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
             this.ClientSize = new System.Drawing.Size(419, 524);
+            this.Controls.Add(this.LogInLink);
             this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ConfirmTxtBox);
             this.Controls.Add(this.UsernameLbl);
             this.Controls.Add(this.PasswordLbl);
             this.Controls.Add(this.CreateNewAcctBtn);
@@ -204,6 +220,7 @@ namespace WriteItOut
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,8 +238,9 @@ namespace WriteItOut
         private System.Windows.Forms.TextBox UsernameField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ConfirmTxtBox;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button CloseBtn;
+        private System.Windows.Forms.LinkLabel LogInLink;
     }
 }

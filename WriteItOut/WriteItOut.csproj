@@ -116,5 +116,23 @@
   <ItemGroup>
     <None Include="Resources\WriteItOutLogo4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\penIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChallengesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuotesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoardIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchIcon2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
