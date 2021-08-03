@@ -31,5 +31,12 @@ namespace WriteItOut
         {
 
         }
+
+        private void QuoteBtn_Click(object sender, EventArgs e)
+        {
+            Quotes quotes = new Quotes();
+            quotes.ShowDialog();
+            this.Close();
+        }
     }
 }

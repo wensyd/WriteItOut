@@ -37,11 +37,10 @@ namespace WriteItOut
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.JournalBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.searchEntriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChallengeBtn = new System.Windows.Forms.ToolStripDropDownButton();
-            this.exploreChallengesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuoteBtn = new System.Windows.Forms.ToolStripButton();
             this.VisionBoardBtn = new System.Windows.Forms.ToolStripButton();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.ChallengeBtn = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -75,7 +74,7 @@ namespace WriteItOut
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -132,29 +131,8 @@ namespace WriteItOut
             // searchEntriesToolStripMenuItem
             // 
             this.searchEntriesToolStripMenuItem.Name = "searchEntriesToolStripMenuItem";
-            this.searchEntriesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.searchEntriesToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.searchEntriesToolStripMenuItem.Text = "Search Entries";
-            // 
-            // ChallengeBtn
-            // 
-            this.ChallengeBtn.AutoSize = false;
-            this.ChallengeBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exploreChallengesToolStripMenuItem});
-            this.ChallengeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ChallengeBtn.Image = global::WriteItOut.Properties.Resources.ChallengesIcon;
-            this.ChallengeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ChallengeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ChallengeBtn.Name = "ChallengeBtn";
-            this.ChallengeBtn.Size = new System.Drawing.Size(130, 77);
-            this.ChallengeBtn.Text = "My Challenges";
-            this.ChallengeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ChallengeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // exploreChallengesToolStripMenuItem
-            // 
-            this.exploreChallengesToolStripMenuItem.Name = "exploreChallengesToolStripMenuItem";
-            this.exploreChallengesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exploreChallengesToolStripMenuItem.Text = "Explore Challenges";
             // 
             // QuoteBtn
             // 
@@ -168,6 +146,7 @@ namespace WriteItOut
             this.QuoteBtn.Text = "Quote of The Day";
             this.QuoteBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.QuoteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.QuoteBtn.Click += new System.EventHandler(this.QuoteBtn_Click);
             // 
             // VisionBoardBtn
             // 
@@ -192,6 +171,19 @@ namespace WriteItOut
             this.logo.Size = new System.Drawing.Size(85, 79);
             this.logo.TabIndex = 27;
             this.logo.TabStop = false;
+            // 
+            // ChallengeBtn
+            // 
+            this.ChallengeBtn.AutoSize = false;
+            this.ChallengeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ChallengeBtn.Image = global::WriteItOut.Properties.Resources.ChallengesIcon;
+            this.ChallengeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ChallengeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ChallengeBtn.Name = "ChallengeBtn";
+            this.ChallengeBtn.Size = new System.Drawing.Size(130, 77);
+            this.ChallengeBtn.Text = "My Challenges";
+            this.ChallengeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ChallengeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // Home
             // 
@@ -228,7 +220,6 @@ namespace WriteItOut
         private System.Windows.Forms.ToolStripButton VisionBoardBtn;
         private System.Windows.Forms.ToolStripDropDownButton JournalBtn;
         private System.Windows.Forms.ToolStripMenuItem searchEntriesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripDropDownButton ChallengeBtn;
-        private System.Windows.Forms.ToolStripMenuItem exploreChallengesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton ChallengeBtn;
     }
 }
