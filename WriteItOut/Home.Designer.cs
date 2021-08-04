@@ -37,10 +37,10 @@ namespace WriteItOut
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.JournalBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.searchEntriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChallengeBtn = new System.Windows.Forms.ToolStripButton();
             this.QuoteBtn = new System.Windows.Forms.ToolStripButton();
             this.VisionBoardBtn = new System.Windows.Forms.ToolStripButton();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.ChallengeBtn = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -134,6 +134,20 @@ namespace WriteItOut
             this.searchEntriesToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.searchEntriesToolStripMenuItem.Text = "Search Entries";
             // 
+            // ChallengeBtn
+            // 
+            this.ChallengeBtn.AutoSize = false;
+            this.ChallengeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ChallengeBtn.Image = global::WriteItOut.Properties.Resources.ChallengesIcon;
+            this.ChallengeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ChallengeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ChallengeBtn.Name = "ChallengeBtn";
+            this.ChallengeBtn.Size = new System.Drawing.Size(130, 77);
+            this.ChallengeBtn.Text = "My Challenges";
+            this.ChallengeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ChallengeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ChallengeBtn.Click += new System.EventHandler(this.ChallengeBtn_Click);
+            // 
             // QuoteBtn
             // 
             this.QuoteBtn.AutoSize = false;
@@ -171,19 +185,6 @@ namespace WriteItOut
             this.logo.Size = new System.Drawing.Size(85, 79);
             this.logo.TabIndex = 27;
             this.logo.TabStop = false;
-            // 
-            // ChallengeBtn
-            // 
-            this.ChallengeBtn.AutoSize = false;
-            this.ChallengeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ChallengeBtn.Image = global::WriteItOut.Properties.Resources.ChallengesIcon;
-            this.ChallengeBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ChallengeBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ChallengeBtn.Name = "ChallengeBtn";
-            this.ChallengeBtn.Size = new System.Drawing.Size(130, 77);
-            this.ChallengeBtn.Text = "My Challenges";
-            this.ChallengeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ChallengeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // Home
             // 

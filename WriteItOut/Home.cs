@@ -38,5 +38,12 @@ namespace WriteItOut
             quotes.ShowDialog();
             this.Close();
         }
+
+        private void ChallengeBtn_Click(object sender, EventArgs e)
+        {
+            Challenges challenges = new Challenges();
+            challenges.ShowDialog();
+            this.Close();
+        }
     }
 }
