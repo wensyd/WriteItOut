@@ -63,9 +63,9 @@ namespace WriteItOut.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BoardIcon {
+        internal static System.Drawing.Bitmap backColorIcon {
             get {
-                object obj = ResourceManager.GetObject("BoardIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("backColorIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,69 @@ namespace WriteItOut.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap floppyIcon {
+            get {
+                object obj = ResourceManager.GetObject("floppyIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fontIcon {
+            get {
+                object obj = ResourceManager.GetObject("fontIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_content_copy_48px_Icon_16 {
+            get {
+                object obj = ResourceManager.GetObject("ic_content_copy_48px_Icon_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap indent_decrease_16_icon {
+            get {
+                object obj = ResourceManager.GetObject("indent_decrease_16_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap indent_increase_16_Icon {
+            get {
+                object obj = ResourceManager.GetObject("indent_increase_16_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize_icon3 {
             get {
                 object obj = ResourceManager.GetObject("minimize_icon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pasteIcon {
+            get {
+                object obj = ResourceManager.GetObject("pasteIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +183,16 @@ namespace WriteItOut.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Redo_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Redo_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap searchIcon {
             get {
                 object obj = ResourceManager.GetObject("searchIcon", resourceCulture);
@@ -136,6 +206,56 @@ namespace WriteItOut.Properties {
         internal static System.Drawing.Bitmap searchIcon2 {
             get {
                 object obj = ResourceManager.GetObject("searchIcon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap text_align_center_icon {
+            get {
+                object obj = ResourceManager.GetObject("text_align_center_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap text_align_left_icon {
+            get {
+                object obj = ResourceManager.GetObject("text_align_left_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap text_align_right_icon {
+            get {
+                object obj = ResourceManager.GetObject("text_align_right_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textColorIcon {
+            get {
+                object obj = ResourceManager.GetObject("textColorIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Undo_icon {
+            get {
+                object obj = ResourceManager.GetObject("Undo_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

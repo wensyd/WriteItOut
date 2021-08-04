@@ -158,6 +158,7 @@ namespace WriteItOut
             this.ConfirmTxtBox.Location = new System.Drawing.Point(73, 327);
             this.ConfirmTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.ConfirmTxtBox.Name = "ConfirmTxtBox";
+            this.ConfirmTxtBox.PasswordChar = '*';
             this.ConfirmTxtBox.Size = new System.Drawing.Size(321, 19);
             this.ConfirmTxtBox.TabIndex = 30;
             // 

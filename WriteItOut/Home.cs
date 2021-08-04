@@ -45,5 +45,17 @@ namespace WriteItOut
             challenges.ShowDialog();
             this.Close();
         }
+
+        private void myJournalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Journal journal = new Journal();
+            journal.ShowDialog();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

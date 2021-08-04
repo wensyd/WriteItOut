@@ -161,5 +161,44 @@
   <ItemGroup>
     <None Include="Resources\searchIcon2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppyIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_content_copy_48px-Icon-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indent-decrease-16-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indent-increase-16-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_center-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_left-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textColorIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backColorIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

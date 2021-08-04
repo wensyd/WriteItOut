@@ -16,5 +16,17 @@ namespace WriteItOut
         {
             InitializeComponent();
         }
+
+        private void Journal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.ShowDialog();
+            this.Close();
+        }
     }
 }

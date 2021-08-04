@@ -50,6 +50,7 @@ namespace WriteItOut
             // 
             this.QuoteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.QuoteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.QuoteBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuoteBtn.Location = new System.Drawing.Point(130, 405);
             this.QuoteBtn.Name = "QuoteBtn";
             this.QuoteBtn.Size = new System.Drawing.Size(279, 38);

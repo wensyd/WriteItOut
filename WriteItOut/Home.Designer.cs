@@ -31,11 +31,12 @@ namespace WriteItOut
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DesktopBtn = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.JournalBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.myJournalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchEntriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChallengeBtn = new System.Windows.Forms.ToolStripButton();
             this.QuoteBtn = new System.Windows.Forms.ToolStripButton();
@@ -48,27 +49,28 @@ namespace WriteItOut
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.DesktopBtn);
             this.panel1.Controls.Add(this.logo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 721);
+            this.panel1.Size = new System.Drawing.Size(164, 721);
             this.panel1.TabIndex = 28;
             // 
-            // button3
+            // DesktopBtn
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(14, 675);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 36);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Show Desktop";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DesktopBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DesktopBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DesktopBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DesktopBtn.Location = new System.Drawing.Point(4, 679);
+            this.DesktopBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.DesktopBtn.Name = "DesktopBtn";
+            this.DesktopBtn.Size = new System.Drawing.Size(147, 36);
+            this.DesktopBtn.TabIndex = 8;
+            this.DesktopBtn.Text = "Show Desktop";
+            this.DesktopBtn.UseVisualStyleBackColor = true;
+            this.DesktopBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // toolStrip1
             // 
@@ -80,9 +82,9 @@ namespace WriteItOut
             this.JournalBtn,
             this.ChallengeBtn,
             this.QuoteBtn});
-            this.toolStrip1.Location = new System.Drawing.Point(215, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(164, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(910, 80);
+            this.toolStrip1.Size = new System.Drawing.Size(961, 80);
             this.toolStrip1.TabIndex = 29;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -114,6 +116,7 @@ namespace WriteItOut
             // 
             this.JournalBtn.AutoSize = false;
             this.JournalBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myJournalToolStripMenuItem,
             this.searchEntriesToolStripMenuItem});
             this.JournalBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.JournalBtn.Image = global::WriteItOut.Properties.Resources.penIcon;
@@ -125,6 +128,13 @@ namespace WriteItOut
             this.JournalBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.JournalBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.JournalBtn.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // myJournalToolStripMenuItem
+            // 
+            this.myJournalToolStripMenuItem.Name = "myJournalToolStripMenuItem";
+            this.myJournalToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.myJournalToolStripMenuItem.Text = "My Journal";
+            this.myJournalToolStripMenuItem.Click += new System.EventHandler(this.myJournalToolStripMenuItem_Click);
             // 
             // searchEntriesToolStripMenuItem
             // 
@@ -200,11 +210,12 @@ namespace WriteItOut
         private System.Windows.Forms.Button MinimizeBtn;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DesktopBtn;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton QuoteBtn;
         private System.Windows.Forms.ToolStripDropDownButton JournalBtn;
         private System.Windows.Forms.ToolStripMenuItem searchEntriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton ChallengeBtn;
+        private System.Windows.Forms.ToolStripMenuItem myJournalToolStripMenuItem;
     }
 }
