@@ -39,7 +39,6 @@ namespace WriteItOut
             this.searchEntriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChallengeBtn = new System.Windows.Forms.ToolStripButton();
             this.QuoteBtn = new System.Windows.Forms.ToolStripButton();
-            this.VisionBoardBtn = new System.Windows.Forms.ToolStripButton();
             this.logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -80,8 +79,7 @@ namespace WriteItOut
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.JournalBtn,
             this.ChallengeBtn,
-            this.QuoteBtn,
-            this.VisionBoardBtn});
+            this.QuoteBtn});
             this.toolStrip1.Location = new System.Drawing.Point(215, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(910, 80);
@@ -162,19 +160,6 @@ namespace WriteItOut
             this.QuoteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.QuoteBtn.Click += new System.EventHandler(this.QuoteBtn_Click);
             // 
-            // VisionBoardBtn
-            // 
-            this.VisionBoardBtn.AutoSize = false;
-            this.VisionBoardBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.VisionBoardBtn.Image = global::WriteItOut.Properties.Resources.BoardIcon;
-            this.VisionBoardBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.VisionBoardBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.VisionBoardBtn.Name = "VisionBoardBtn";
-            this.VisionBoardBtn.Size = new System.Drawing.Size(130, 77);
-            this.VisionBoardBtn.Text = "Vision Board";
-            this.VisionBoardBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.VisionBoardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // logo
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
@@ -218,7 +203,6 @@ namespace WriteItOut
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton QuoteBtn;
-        private System.Windows.Forms.ToolStripButton VisionBoardBtn;
         private System.Windows.Forms.ToolStripDropDownButton JournalBtn;
         private System.Windows.Forms.ToolStripMenuItem searchEntriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton ChallengeBtn;
