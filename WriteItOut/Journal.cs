@@ -107,7 +107,9 @@ namespace WriteItOut
 
             //--------------------------------
 
-            this.IdTxtBox.Text = WriteItOut.Properties.Settings.Default.last_journal_id.ToString();
+            Int32 i;
+            i = WriteItOut.Properties.Settings.Default.last_journal_id + 0;
+            this.IdTxtBox.Text = i.ToString();
 
             //---------------------------------
 
