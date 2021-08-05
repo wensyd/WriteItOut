@@ -16,7 +16,7 @@ namespace WriteItOut
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Journal());
+            Application.Run(new Home());
         }
     }
 }

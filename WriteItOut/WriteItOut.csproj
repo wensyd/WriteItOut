@@ -64,6 +64,12 @@
     <Compile Include="Journal.Designer.cs">
       <DependentUpon>Journal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Journal_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journal_Search.Designer.cs">
+      <DependentUpon>Journal_Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Journal.resx">
       <DependentUpon>Journal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journal_Search.resx">
+      <DependentUpon>Journal_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

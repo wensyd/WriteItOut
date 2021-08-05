@@ -1,7 +1,7 @@
 ﻿
 namespace WriteItOut
 {
-    partial class Journal
+    partial class Journal_Search
     {
         /// <summary>
         /// Required designer variable.
@@ -29,45 +29,143 @@ namespace WriteItOut
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.NewBtn = new System.Windows.Forms.Button();
-            this.SaveBtn = new System.Windows.Forms.Button();
+            this.CloseBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DateTxtBox = new System.Windows.Forms.TextBox();
-            this.DateLbl = new System.Windows.Forms.Label();
-            this.TitleTxtBox = new System.Windows.Forms.TextBox();
-            this.TitleLbl = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.IdTxtBox = new System.Windows.Forms.TextBox();
             this.IdLbl = new System.Windows.Forms.Label();
-            this.ResetBtn = new System.Windows.Forms.Button();
-            this.CloseBtn = new System.Windows.Forms.Button();
+            this.DateTxtBox = new System.Windows.Forms.TextBox();
+            this.DateLbl = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TitleTxtBox = new System.Windows.Forms.TextBox();
+            this.TitleLbl = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.FontBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.ForeColorBtn = new System.Windows.Forms.ToolStripButton();
             this.BackColorBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.leftAlignBtn = new System.Windows.Forms.ToolStripButton();
             this.CenterAlignBtn = new System.Windows.Forms.ToolStripButton();
             this.RightAlignBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.decreaseIndentBtn = new System.Windows.Forms.ToolStripButton();
             this.IncreaseIndentBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.copyBtn = new System.Windows.Forms.ToolStripButton();
             this.pasteBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.undoBtn = new System.Windows.Forms.ToolStripButton();
             this.redoBtn = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.IdSearchTxtBox = new System.Windows.Forms.TextBox();
+            this.IdSearchLbl = new System.Windows.Forms.Label();
+            this.SearchBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // CloseBtn
+            // 
+            this.CloseBtn.BackColor = System.Drawing.Color.White;
+            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
+            this.CloseBtn.Location = new System.Drawing.Point(961, 13);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
+            this.CloseBtn.TabIndex = 28;
+            this.CloseBtn.UseVisualStyleBackColor = false;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.IdTxtBox);
+            this.groupBox1.Controls.Add(this.IdLbl);
+            this.groupBox1.Controls.Add(this.DateTxtBox);
+            this.groupBox1.Controls.Add(this.DateLbl);
+            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.TitleTxtBox);
+            this.groupBox1.Controls.Add(this.TitleLbl);
+            this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(273, 67);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(716, 592);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Journal Details";
+            // 
+            // IdTxtBox
+            // 
+            this.IdTxtBox.Location = new System.Drawing.Point(143, 31);
+            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.IdTxtBox.Name = "IdTxtBox";
+            this.IdTxtBox.ReadOnly = true;
+            this.IdTxtBox.Size = new System.Drawing.Size(78, 22);
+            this.IdTxtBox.TabIndex = 6;
+            // 
+            // IdLbl
+            // 
+            this.IdLbl.AutoSize = true;
+            this.IdLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdLbl.Location = new System.Drawing.Point(61, 31);
+            this.IdLbl.Name = "IdLbl";
+            this.IdLbl.Size = new System.Drawing.Size(63, 17);
+            this.IdLbl.TabIndex = 5;
+            this.IdLbl.Text = "Entry ID:";
+            // 
+            // DateTxtBox
+            // 
+            this.DateTxtBox.Location = new System.Drawing.Point(143, 87);
+            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DateTxtBox.Name = "DateTxtBox";
+            this.DateTxtBox.ReadOnly = true;
+            this.DateTxtBox.Size = new System.Drawing.Size(503, 22);
+            this.DateTxtBox.TabIndex = 4;
+            // 
+            // DateLbl
+            // 
+            this.DateLbl.AutoSize = true;
+            this.DateLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLbl.Location = new System.Drawing.Point(48, 87);
+            this.DateLbl.Name = "DateLbl";
+            this.DateLbl.Size = new System.Drawing.Size(76, 17);
+            this.DateLbl.TabIndex = 3;
+            this.DateLbl.Text = "Entry Date:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBox1.Location = new System.Drawing.Point(9, 156);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(687, 418);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            // 
+            // TitleTxtBox
+            // 
+            this.TitleTxtBox.Location = new System.Drawing.Point(143, 59);
+            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TitleTxtBox.Name = "TitleTxtBox";
+            this.TitleTxtBox.ReadOnly = true;
+            this.TitleTxtBox.Size = new System.Drawing.Size(503, 22);
+            this.TitleTxtBox.TabIndex = 2;
+            // 
+            // TitleLbl
+            // 
+            this.TitleLbl.AutoSize = true;
+            this.TitleLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLbl.Location = new System.Drawing.Point(52, 59);
+            this.TitleLbl.Name = "TitleLbl";
+            this.TitleLbl.Size = new System.Drawing.Size(72, 17);
+            this.TitleLbl.TabIndex = 1;
+            this.TitleLbl.Text = "Entry Title:";
             // 
             // toolStrip1
             // 
@@ -98,188 +196,7 @@ namespace WriteItOut
             this.toolStrip1.Size = new System.Drawing.Size(683, 34);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 34);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 34);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 34);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 34);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox1.Location = new System.Drawing.Point(9, 167);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(687, 322);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.ResetBtn);
-            this.panel1.Controls.Add(this.NewBtn);
-            this.panel1.Controls.Add(this.SaveBtn);
-            this.panel1.Location = new System.Drawing.Point(88, 76);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 68);
-            this.panel1.TabIndex = 2;
-            // 
-            // NewBtn
-            // 
-            this.NewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NewBtn.Location = new System.Drawing.Point(9, 16);
-            this.NewBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NewBtn.Name = "NewBtn";
-            this.NewBtn.Size = new System.Drawing.Size(107, 33);
-            this.NewBtn.TabIndex = 1;
-            this.NewBtn.Text = "New Entry F2";
-            this.NewBtn.UseVisualStyleBackColor = true;
-            this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SaveBtn.Location = new System.Drawing.Point(123, 16);
-            this.SaveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(113, 33);
-            this.SaveBtn.TabIndex = 0;
-            this.SaveBtn.Text = "Save F5";
-            this.SaveBtn.UseVisualStyleBackColor = true;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.IdTxtBox);
-            this.groupBox1.Controls.Add(this.IdLbl);
-            this.groupBox1.Controls.Add(this.DateTxtBox);
-            this.groupBox1.Controls.Add(this.DateLbl);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.TitleTxtBox);
-            this.groupBox1.Controls.Add(this.TitleLbl);
-            this.groupBox1.Controls.Add(this.toolStrip1);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(39, 109);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(711, 502);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Journal Details";
-            // 
-            // DateTxtBox
-            // 
-            this.DateTxtBox.Location = new System.Drawing.Point(143, 87);
-            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DateTxtBox.Name = "DateTxtBox";
-            this.DateTxtBox.Size = new System.Drawing.Size(503, 22);
-            this.DateTxtBox.TabIndex = 4;
-            // 
-            // DateLbl
-            // 
-            this.DateLbl.AutoSize = true;
-            this.DateLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLbl.Location = new System.Drawing.Point(48, 87);
-            this.DateLbl.Name = "DateLbl";
-            this.DateLbl.Size = new System.Drawing.Size(76, 17);
-            this.DateLbl.TabIndex = 3;
-            this.DateLbl.Text = "Entry Date:";
-            // 
-            // TitleTxtBox
-            // 
-            this.TitleTxtBox.Location = new System.Drawing.Point(143, 59);
-            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TitleTxtBox.Name = "TitleTxtBox";
-            this.TitleTxtBox.Size = new System.Drawing.Size(503, 22);
-            this.TitleTxtBox.TabIndex = 2;
-            // 
-            // TitleLbl
-            // 
-            this.TitleLbl.AutoSize = true;
-            this.TitleLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLbl.Location = new System.Drawing.Point(52, 59);
-            this.TitleLbl.Name = "TitleLbl";
-            this.TitleLbl.Size = new System.Drawing.Size(72, 17);
-            this.TitleLbl.TabIndex = 1;
-            this.TitleLbl.Text = "Entry Title:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(47, 37);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(787, 629);
-            this.panel2.TabIndex = 5;
-            // 
-            // IdTxtBox
-            // 
-            this.IdTxtBox.Location = new System.Drawing.Point(143, 31);
-            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.IdTxtBox.Name = "IdTxtBox";
-            this.IdTxtBox.ReadOnly = true;
-            this.IdTxtBox.Size = new System.Drawing.Size(78, 22);
-            this.IdTxtBox.TabIndex = 6;
-            // 
-            // IdLbl
-            // 
-            this.IdLbl.AutoSize = true;
-            this.IdLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLbl.Location = new System.Drawing.Point(61, 31);
-            this.IdLbl.Name = "IdLbl";
-            this.IdLbl.Size = new System.Drawing.Size(63, 17);
-            this.IdLbl.TabIndex = 5;
-            this.IdLbl.Text = "Entry ID:";
-            // 
-            // ResetBtn
-            // 
-            this.ResetBtn.Location = new System.Drawing.Point(470, 16);
-            this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(123, 33);
-            this.ResetBtn.TabIndex = 2;
-            this.ResetBtn.Text = "Reset";
-            this.ResetBtn.UseVisualStyleBackColor = true;
-            this.ResetBtn.Visible = false;
-            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.BackColor = System.Drawing.Color.White;
-            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
-            this.CloseBtn.Location = new System.Drawing.Point(841, 14);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
-            this.CloseBtn.TabIndex = 27;
-            this.CloseBtn.UseVisualStyleBackColor = false;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            this.toolStrip1.Visible = false;
             // 
             // FontBtn
             // 
@@ -291,7 +208,11 @@ namespace WriteItOut
             this.FontBtn.Size = new System.Drawing.Size(29, 31);
             this.FontBtn.Text = "toolStripButton1";
             this.FontBtn.ToolTipText = "Font";
-            this.FontBtn.Click += new System.EventHandler(this.FontBtn_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 34);
             // 
             // ForeColorBtn
             // 
@@ -302,7 +223,6 @@ namespace WriteItOut
             this.ForeColorBtn.Size = new System.Drawing.Size(29, 31);
             this.ForeColorBtn.Text = "toolStripButton2";
             this.ForeColorBtn.ToolTipText = "Fore Color";
-            this.ForeColorBtn.Click += new System.EventHandler(this.ForeColorBtn_Click);
             // 
             // BackColorBtn
             // 
@@ -314,7 +234,11 @@ namespace WriteItOut
             this.BackColorBtn.Size = new System.Drawing.Size(29, 31);
             this.BackColorBtn.Text = "toolStripButton1";
             this.BackColorBtn.ToolTipText = "Text Back Color";
-            this.BackColorBtn.Click += new System.EventHandler(this.BackColorBtn_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 34);
             // 
             // leftAlignBtn
             // 
@@ -326,7 +250,6 @@ namespace WriteItOut
             this.leftAlignBtn.Size = new System.Drawing.Size(29, 31);
             this.leftAlignBtn.Text = "toolStripButton1";
             this.leftAlignBtn.ToolTipText = "Left Align";
-            this.leftAlignBtn.Click += new System.EventHandler(this.leftAlignBtn_Click);
             // 
             // CenterAlignBtn
             // 
@@ -338,7 +261,6 @@ namespace WriteItOut
             this.CenterAlignBtn.Size = new System.Drawing.Size(29, 31);
             this.CenterAlignBtn.Text = "toolStripButton2";
             this.CenterAlignBtn.ToolTipText = "Center Align";
-            this.CenterAlignBtn.Click += new System.EventHandler(this.CenterAlignBtn_Click);
             // 
             // RightAlignBtn
             // 
@@ -349,7 +271,11 @@ namespace WriteItOut
             this.RightAlignBtn.Size = new System.Drawing.Size(29, 31);
             this.RightAlignBtn.Text = "toolStripButton3";
             this.RightAlignBtn.ToolTipText = "Right Align";
-            this.RightAlignBtn.Click += new System.EventHandler(this.RightAlignBtn_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // decreaseIndentBtn
             // 
@@ -361,7 +287,6 @@ namespace WriteItOut
             this.decreaseIndentBtn.Size = new System.Drawing.Size(29, 31);
             this.decreaseIndentBtn.Text = "toolStripButton4";
             this.decreaseIndentBtn.ToolTipText = "Decrease Indent";
-            this.decreaseIndentBtn.Click += new System.EventHandler(this.decreaseIndentBtn_Click);
             // 
             // IncreaseIndentBtn
             // 
@@ -373,7 +298,11 @@ namespace WriteItOut
             this.IncreaseIndentBtn.Size = new System.Drawing.Size(29, 31);
             this.IncreaseIndentBtn.Text = "toolStripButton5";
             this.IncreaseIndentBtn.ToolTipText = "Increase Indent";
-            this.IncreaseIndentBtn.Click += new System.EventHandler(this.IncreaseIndentBtn_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 34);
             // 
             // copyBtn
             // 
@@ -385,7 +314,6 @@ namespace WriteItOut
             this.copyBtn.Size = new System.Drawing.Size(29, 31);
             this.copyBtn.Text = "toolStripButton1";
             this.copyBtn.ToolTipText = "Copy";
-            this.copyBtn.Click += new System.EventHandler(this.copyBtn_Click);
             // 
             // pasteBtn
             // 
@@ -397,7 +325,11 @@ namespace WriteItOut
             this.pasteBtn.Size = new System.Drawing.Size(29, 31);
             this.pasteBtn.Text = "toolStripButton1";
             this.pasteBtn.ToolTipText = "Paste";
-            this.pasteBtn.Click += new System.EventHandler(this.pasteBtn_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 34);
             // 
             // undoBtn
             // 
@@ -409,7 +341,6 @@ namespace WriteItOut
             this.undoBtn.Size = new System.Drawing.Size(29, 31);
             this.undoBtn.Text = "toolStripButton1";
             this.undoBtn.ToolTipText = "Undo";
-            this.undoBtn.Click += new System.EventHandler(this.undoBtn_Click);
             // 
             // redoBtn
             // 
@@ -421,52 +352,94 @@ namespace WriteItOut
             this.redoBtn.Size = new System.Drawing.Size(29, 31);
             this.redoBtn.Text = "toolStripButton1";
             this.redoBtn.ToolTipText = "Redo";
-            this.redoBtn.Click += new System.EventHandler(this.redoBtn_Click);
             // 
-            // Journal
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.SearchBtn);
+            this.groupBox2.Controls.Add(this.IdSearchLbl);
+            this.groupBox2.Controls.Add(this.IdSearchTxtBox);
+            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Location = new System.Drawing.Point(14, 57);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(243, 602);
+            this.groupBox2.TabIndex = 30;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Search";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(6, 166);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(223, 420);
+            this.listBox1.TabIndex = 0;
+            // 
+            // IdSearchTxtBox
+            // 
+            this.IdSearchTxtBox.Location = new System.Drawing.Point(85, 132);
+            this.IdSearchTxtBox.Name = "IdSearchTxtBox";
+            this.IdSearchTxtBox.Size = new System.Drawing.Size(65, 22);
+            this.IdSearchTxtBox.TabIndex = 1;
+            // 
+            // IdSearchLbl
+            // 
+            this.IdSearchLbl.AutoSize = true;
+            this.IdSearchLbl.Location = new System.Drawing.Point(3, 137);
+            this.IdSearchLbl.Name = "IdSearchLbl";
+            this.IdSearchLbl.Size = new System.Drawing.Size(76, 17);
+            this.IdSearchLbl.TabIndex = 2;
+            this.IdSearchLbl.Text = "Journal ID:";
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Location = new System.Drawing.Point(157, 132);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(72, 23);
+            this.SearchBtn.TabIndex = 3;
+            this.SearchBtn.Text = "Search";
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            // 
+            // Journal_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(883, 706);
+            this.ClientSize = new System.Drawing.Size(1019, 687);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CloseBtn);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Journal";
+            this.Name = "Journal_Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Journal";
-            this.Load += new System.EventHandler(this.Journal_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.Text = "Journal_Search";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton FontBtn;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button NewBtn;
-        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button CloseBtn;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox IdTxtBox;
+        private System.Windows.Forms.Label IdLbl;
         private System.Windows.Forms.TextBox DateTxtBox;
         private System.Windows.Forms.Label DateLbl;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox TitleTxtBox;
         private System.Windows.Forms.Label TitleLbl;
-        private System.Windows.Forms.Button CloseBtn;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ToolStripButton ForeColorBtn;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton FontBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton ForeColorBtn;
         private System.Windows.Forms.ToolStripButton BackColorBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton leftAlignBtn;
@@ -481,10 +454,10 @@ namespace WriteItOut
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton undoBtn;
         private System.Windows.Forms.ToolStripButton redoBtn;
-        private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.TextBox IdTxtBox;
-        private System.Windows.Forms.Label IdLbl;
-        private System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.Label IdSearchLbl;
+        private System.Windows.Forms.TextBox IdSearchTxtBox;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

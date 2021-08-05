@@ -57,5 +57,11 @@ namespace WriteItOut
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void searchEntriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Journal_Search journal_Search = new Journal_Search();
+            journal_Search.Show();
+        }
     }
 }

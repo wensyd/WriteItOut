@@ -32,18 +32,18 @@ namespace WriteItOut
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
             this.DesktopBtn = new System.Windows.Forms.Button();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.CloseBtn = new System.Windows.Forms.Button();
-            this.MinimizeBtn = new System.Windows.Forms.Button();
             this.JournalBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.myJournalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchEntriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChallengeBtn = new System.Windows.Forms.ToolStripButton();
             this.QuoteBtn = new System.Windows.Forms.ToolStripButton();
-            this.logo = new System.Windows.Forms.PictureBox();
+            this.CloseBtn = new System.Windows.Forms.Button();
+            this.MinimizeBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +72,17 @@ namespace WriteItOut
             this.DesktopBtn.UseVisualStyleBackColor = true;
             this.DesktopBtn.Click += new System.EventHandler(this.button3_Click);
             // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
+            this.logo.Location = new System.Drawing.Point(4, 12);
+            this.logo.Margin = new System.Windows.Forms.Padding(4);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(85, 79);
+            this.logo.TabIndex = 27;
+            this.logo.TabStop = false;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
@@ -87,30 +98,6 @@ namespace WriteItOut
             this.toolStrip1.Size = new System.Drawing.Size(961, 80);
             this.toolStrip1.TabIndex = 29;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
-            this.CloseBtn.Location = new System.Drawing.Point(1084, 13);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
-            this.CloseBtn.TabIndex = 26;
-            this.CloseBtn.UseVisualStyleBackColor = true;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
-            // 
-            // MinimizeBtn
-            // 
-            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimizeBtn.Image = global::WriteItOut.Properties.Resources.minimize_icon3;
-            this.MinimizeBtn.Location = new System.Drawing.Point(1054, 13);
-            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(28, 38);
-            this.MinimizeBtn.TabIndex = 25;
-            this.MinimizeBtn.UseVisualStyleBackColor = true;
-            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
             // JournalBtn
             // 
@@ -132,15 +119,16 @@ namespace WriteItOut
             // myJournalToolStripMenuItem
             // 
             this.myJournalToolStripMenuItem.Name = "myJournalToolStripMenuItem";
-            this.myJournalToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.myJournalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.myJournalToolStripMenuItem.Text = "My Journal";
             this.myJournalToolStripMenuItem.Click += new System.EventHandler(this.myJournalToolStripMenuItem_Click);
             // 
             // searchEntriesToolStripMenuItem
             // 
             this.searchEntriesToolStripMenuItem.Name = "searchEntriesToolStripMenuItem";
-            this.searchEntriesToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.searchEntriesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.searchEntriesToolStripMenuItem.Text = "Search Entries";
+            this.searchEntriesToolStripMenuItem.Click += new System.EventHandler(this.searchEntriesToolStripMenuItem_Click);
             // 
             // ChallengeBtn
             // 
@@ -170,16 +158,29 @@ namespace WriteItOut
             this.QuoteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.QuoteBtn.Click += new System.EventHandler(this.QuoteBtn_Click);
             // 
-            // logo
+            // CloseBtn
             // 
-            this.logo.BackColor = System.Drawing.Color.Transparent;
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.Location = new System.Drawing.Point(4, 12);
-            this.logo.Margin = new System.Windows.Forms.Padding(4);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(85, 79);
-            this.logo.TabIndex = 27;
-            this.logo.TabStop = false;
+            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
+            this.CloseBtn.Location = new System.Drawing.Point(1084, 13);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
+            this.CloseBtn.TabIndex = 26;
+            this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            // 
+            // MinimizeBtn
+            // 
+            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeBtn.Image = global::WriteItOut.Properties.Resources.minimize_icon3;
+            this.MinimizeBtn.Location = new System.Drawing.Point(1054, 13);
+            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBtn.Name = "MinimizeBtn";
+            this.MinimizeBtn.Size = new System.Drawing.Size(28, 38);
+            this.MinimizeBtn.TabIndex = 25;
+            this.MinimizeBtn.UseVisualStyleBackColor = true;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
             // Home
             // 
@@ -197,9 +198,9 @@ namespace WriteItOut
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
