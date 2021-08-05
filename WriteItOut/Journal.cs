@@ -104,6 +104,16 @@ namespace WriteItOut
             this.groupBox1.Enabled = true;
             this.NewBtn.Enabled = false;
             this.SaveBtn.Enabled = true;
+
+            //--------------------------------
+
+            this.IdTxtBox.Text = WriteItOut.Properties.Settings.Default.last_journal_id.ToString();
+
+            //---------------------------------
+
+            this.TitleTxtBox.Text = "";
+            this.DateTxtBox.ResetText();
+            this.richTextBox1.Text = ""; 
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -120,11 +130,27 @@ namespace WriteItOut
             WriteItOut.Properties.Settings.Default.last_journal_id = last_id;
             WriteItOut.Properties.Settings.Default.Save();
             //---------------------------------
-
             string fn;
-            fn = Application.StartupPath + "\\data\\docs\\" + last_id.ToString() + " .rtf";
+            string fn_title;
+            string fn_date;
+            fn = Application.StartupPath + "\\data\\docs\\" + last_id.ToString() + ".rtf";
+            fn_title = Application.StartupPath + "\\data\\docs\\title_" + last_id.ToString() + ".txt";
+            fn_date = Application.StartupPath + "\\data\\docs\\date_" + last_id.ToString() + ".txt";
+            //-----------------------------------
+            System.IO.File.WriteAllText(fn_title, this.TitleTxtBox.Text, Encoding.UTF8);
+            System.IO.File.WriteAllText(fn_date, this.DateTxtBox.Text, Encoding.UTF8);
+
+
+
+            //------------------------------------
             this.richTextBox1.SaveFile(fn);
             MessageBox.Show("Your entry is saved!");
+        }
+
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            WriteItOut.Properties.Settings.Default.last_journal_id = 0;
+            WriteItOut.Properties.Settings.Default.Save();
         }
     }
 }
