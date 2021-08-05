@@ -63,6 +63,7 @@ namespace WriteItOut
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -265,7 +266,7 @@ namespace WriteItOut
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox1.Location = new System.Drawing.Point(70, 253);
+            this.richTextBox1.Location = new System.Drawing.Point(7, 136);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(516, 262);
@@ -285,6 +286,7 @@ namespace WriteItOut
             // 
             // NewBtn
             // 
+            this.NewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NewBtn.Location = new System.Drawing.Point(7, 13);
             this.NewBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NewBtn.Name = "NewBtn";
@@ -292,9 +294,11 @@ namespace WriteItOut
             this.NewBtn.TabIndex = 1;
             this.NewBtn.Text = "New Entry F2";
             this.NewBtn.UseVisualStyleBackColor = true;
+            this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
             // 
             // SaveBtn
             // 
+            this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveBtn.Location = new System.Drawing.Point(92, 13);
             this.SaveBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SaveBtn.Name = "SaveBtn";
@@ -302,20 +306,23 @@ namespace WriteItOut
             this.SaveBtn.TabIndex = 0;
             this.SaveBtn.Text = "Save F5";
             this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.DateTxtBox);
             this.groupBox1.Controls.Add(this.DateLbl);
+            this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.TitleTxtBox);
             this.groupBox1.Controls.Add(this.TitleLbl);
             this.groupBox1.Controls.Add(this.toolStrip1);
-            this.groupBox1.Location = new System.Drawing.Point(66, 119);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(29, 89);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(519, 401);
+            this.groupBox1.Size = new System.Drawing.Size(533, 408);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Journal Details";
@@ -362,6 +369,7 @@ namespace WriteItOut
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Location = new System.Drawing.Point(35, 30);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
@@ -388,8 +396,6 @@ namespace WriteItOut
             this.ClientSize = new System.Drawing.Size(662, 574);
             this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -404,6 +410,7 @@ namespace WriteItOut
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

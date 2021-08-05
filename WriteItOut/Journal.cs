@@ -19,7 +19,8 @@ namespace WriteItOut
 
         private void Journal_Load(object sender, EventArgs e)
         {
-
+            this.groupBox1.Enabled = false;
+            this.SaveBtn.Enabled = false;
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -96,6 +97,20 @@ namespace WriteItOut
         private void redoBtn_Click(object sender, EventArgs e)
         {
             this.richTextBox1.Redo();
+        }
+
+        private void NewBtn_Click(object sender, EventArgs e)
+        {
+            this.groupBox1.Enabled = true;
+            this.NewBtn.Enabled = false;
+            this.SaveBtn.Enabled = true;
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            this.groupBox1.Enabled = false;
+            this.SaveBtn.Enabled = false;
+            this.NewBtn.Enabled = true;
         }
     }
 }
