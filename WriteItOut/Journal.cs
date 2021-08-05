@@ -111,6 +111,20 @@ namespace WriteItOut
             this.groupBox1.Enabled = false;
             this.SaveBtn.Enabled = false;
             this.NewBtn.Enabled = true;
+
+            //---------------------------------
+            Int32 last_id;
+            last_id = WriteItOut.Properties.Settings.Default.last_journal_id;
+            last_id = last_id + 1;
+            //--------------------------------
+            WriteItOut.Properties.Settings.Default.last_journal_id = last_id;
+            WriteItOut.Properties.Settings.Default.Save();
+            //---------------------------------
+
+            string fn;
+            fn = Application.StartupPath + "\\data\\docs\\" + last_id.ToString() + " .rtf";
+            this.richTextBox1.SaveFile(fn);
+            MessageBox.Show("Your entry is saved!");
         }
     }
 }
