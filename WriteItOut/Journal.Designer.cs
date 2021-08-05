@@ -29,6 +29,7 @@ namespace WriteItOut
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Journal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.FontBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -270,7 +271,7 @@ namespace WriteItOut
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.richTextBox1.Location = new System.Drawing.Point(7, 136);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(516, 262);
             this.richTextBox1.TabIndex = 1;
@@ -283,7 +284,7 @@ namespace WriteItOut
             this.panel1.Controls.Add(this.NewBtn);
             this.panel1.Controls.Add(this.SaveBtn);
             this.panel1.Location = new System.Drawing.Point(66, 62);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(519, 55);
             this.panel1.TabIndex = 2;
@@ -291,7 +292,7 @@ namespace WriteItOut
             // ResetBtn
             // 
             this.ResetBtn.Location = new System.Drawing.Point(352, 13);
-            this.ResetBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResetBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(92, 27);
             this.ResetBtn.TabIndex = 2;
@@ -304,7 +305,7 @@ namespace WriteItOut
             // 
             this.NewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NewBtn.Location = new System.Drawing.Point(7, 13);
-            this.NewBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NewBtn.Name = "NewBtn";
             this.NewBtn.Size = new System.Drawing.Size(80, 27);
             this.NewBtn.TabIndex = 1;
@@ -316,7 +317,7 @@ namespace WriteItOut
             // 
             this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveBtn.Location = new System.Drawing.Point(92, 13);
-            this.SaveBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SaveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(85, 27);
             this.SaveBtn.TabIndex = 0;
@@ -337,9 +338,9 @@ namespace WriteItOut
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(29, 89);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(533, 408);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -348,7 +349,7 @@ namespace WriteItOut
             // IdTxtBox
             // 
             this.IdTxtBox.Location = new System.Drawing.Point(107, 25);
-            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdTxtBox.Name = "IdTxtBox";
             this.IdTxtBox.ReadOnly = true;
             this.IdTxtBox.Size = new System.Drawing.Size(60, 20);
@@ -368,7 +369,7 @@ namespace WriteItOut
             // DateTxtBox
             // 
             this.DateTxtBox.Location = new System.Drawing.Point(107, 71);
-            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.DateTxtBox.Name = "DateTxtBox";
             this.DateTxtBox.Size = new System.Drawing.Size(378, 20);
             this.DateTxtBox.TabIndex = 4;
@@ -387,7 +388,7 @@ namespace WriteItOut
             // TitleTxtBox
             // 
             this.TitleTxtBox.Location = new System.Drawing.Point(107, 48);
-            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.TitleTxtBox.Name = "TitleTxtBox";
             this.TitleTxtBox.Size = new System.Drawing.Size(378, 20);
             this.TitleTxtBox.TabIndex = 2;
@@ -409,7 +410,7 @@ namespace WriteItOut
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Location = new System.Drawing.Point(35, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(591, 512);
             this.panel2.TabIndex = 5;
@@ -436,7 +437,8 @@ namespace WriteItOut
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Journal";

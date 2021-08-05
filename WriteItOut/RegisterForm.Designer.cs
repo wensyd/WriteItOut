@@ -51,10 +51,9 @@ namespace WriteItOut
             this.UsernameLbl.AutoSize = true;
             this.UsernameLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
             this.UsernameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.UsernameLbl.Location = new System.Drawing.Point(73, 152);
-            this.UsernameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UsernameLbl.Location = new System.Drawing.Point(55, 124);
             this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(77, 17);
+            this.UsernameLbl.Size = new System.Drawing.Size(58, 13);
             this.UsernameLbl.TabIndex = 29;
             this.UsernameLbl.Text = "Username:";
             // 
@@ -63,10 +62,9 @@ namespace WriteItOut
             this.PasswordLbl.AutoSize = true;
             this.PasswordLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
             this.PasswordLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(207)))), ((int)(((byte)(208)))));
-            this.PasswordLbl.Location = new System.Drawing.Point(73, 229);
-            this.PasswordLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PasswordLbl.Location = new System.Drawing.Point(55, 186);
             this.PasswordLbl.Name = "PasswordLbl";
-            this.PasswordLbl.Size = new System.Drawing.Size(73, 17);
+            this.PasswordLbl.Size = new System.Drawing.Size(56, 13);
             this.PasswordLbl.TabIndex = 28;
             this.PasswordLbl.Text = "Password:";
             // 
@@ -75,10 +73,9 @@ namespace WriteItOut
             this.CreateNewAcctBtn.BackColor = System.Drawing.SystemColors.Control;
             this.CreateNewAcctBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateNewAcctBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.CreateNewAcctBtn.Location = new System.Drawing.Point(73, 402);
-            this.CreateNewAcctBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CreateNewAcctBtn.Location = new System.Drawing.Point(55, 327);
             this.CreateNewAcctBtn.Name = "CreateNewAcctBtn";
-            this.CreateNewAcctBtn.Size = new System.Drawing.Size(267, 38);
+            this.CreateNewAcctBtn.Size = new System.Drawing.Size(200, 31);
             this.CreateNewAcctBtn.TabIndex = 27;
             this.CreateNewAcctBtn.Text = "Create New Account";
             this.CreateNewAcctBtn.UseVisualStyleBackColor = false;
@@ -87,19 +84,17 @@ namespace WriteItOut
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(73, 278);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(55, 226);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 1);
+            this.panel2.Size = new System.Drawing.Size(200, 1);
             this.panel2.TabIndex = 25;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(207)))), ((int)(((byte)(208)))));
-            this.panel1.Location = new System.Drawing.Point(73, 201);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(55, 163);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 1);
+            this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 24;
             // 
             // PasswordField
@@ -108,11 +103,10 @@ namespace WriteItOut
             this.PasswordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordField.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordField.ForeColor = System.Drawing.Color.White;
-            this.PasswordField.Location = new System.Drawing.Point(73, 252);
-            this.PasswordField.Margin = new System.Windows.Forms.Padding(4);
+            this.PasswordField.Location = new System.Drawing.Point(55, 205);
             this.PasswordField.Name = "PasswordField";
             this.PasswordField.PasswordChar = '*';
-            this.PasswordField.Size = new System.Drawing.Size(321, 19);
+            this.PasswordField.Size = new System.Drawing.Size(241, 15);
             this.PasswordField.TabIndex = 23;
             this.PasswordField.UseSystemPasswordChar = true;
             // 
@@ -122,10 +116,9 @@ namespace WriteItOut
             this.UsernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameField.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameField.ForeColor = System.Drawing.Color.White;
-            this.UsernameField.Location = new System.Drawing.Point(73, 175);
-            this.UsernameField.Margin = new System.Windows.Forms.Padding(4);
+            this.UsernameField.Location = new System.Drawing.Point(55, 142);
             this.UsernameField.Name = "UsernameField";
-            this.UsernameField.Size = new System.Drawing.Size(321, 19);
+            this.UsernameField.Size = new System.Drawing.Size(241, 15);
             this.UsernameField.TabIndex = 22;
             // 
             // label1
@@ -133,20 +126,18 @@ namespace WriteItOut
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(73, 304);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(55, 247);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 17);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 32;
             this.label1.Text = "Password Confirm:";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(207)))), ((int)(((byte)(208)))));
-            this.panel3.Location = new System.Drawing.Point(73, 353);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(55, 287);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(267, 1);
+            this.panel3.Size = new System.Drawing.Size(200, 1);
             this.panel3.TabIndex = 31;
             // 
             // ConfirmTxtBox
@@ -155,21 +146,19 @@ namespace WriteItOut
             this.ConfirmTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConfirmTxtBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmTxtBox.ForeColor = System.Drawing.Color.White;
-            this.ConfirmTxtBox.Location = new System.Drawing.Point(73, 327);
-            this.ConfirmTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ConfirmTxtBox.Location = new System.Drawing.Point(55, 266);
             this.ConfirmTxtBox.Name = "ConfirmTxtBox";
             this.ConfirmTxtBox.PasswordChar = '*';
-            this.ConfirmTxtBox.Size = new System.Drawing.Size(321, 19);
+            this.ConfirmTxtBox.Size = new System.Drawing.Size(241, 15);
             this.ConfirmTxtBox.TabIndex = 30;
             // 
             // logo
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.Location = new System.Drawing.Point(13, 13);
-            this.logo.Margin = new System.Windows.Forms.Padding(4);
+            this.logo.Location = new System.Drawing.Point(10, 11);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(81, 79);
+            this.logo.Size = new System.Drawing.Size(61, 64);
             this.logo.TabIndex = 33;
             this.logo.TabStop = false;
             // 
@@ -177,10 +166,9 @@ namespace WriteItOut
             // 
             this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
-            this.CloseBtn.Location = new System.Drawing.Point(366, 22);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseBtn.Location = new System.Drawing.Point(274, 18);
             this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
+            this.CloseBtn.Size = new System.Drawing.Size(21, 31);
             this.CloseBtn.TabIndex = 34;
             this.CloseBtn.UseVisualStyleBackColor = true;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
@@ -189,10 +177,9 @@ namespace WriteItOut
             // 
             this.LogInLink.AutoSize = true;
             this.LogInLink.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.LogInLink.Location = new System.Drawing.Point(293, 22);
-            this.LogInLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LogInLink.Location = new System.Drawing.Point(220, 18);
             this.LogInLink.Name = "LogInLink";
-            this.LogInLink.Size = new System.Drawing.Size(47, 17);
+            this.LogInLink.Size = new System.Drawing.Size(36, 13);
             this.LogInLink.TabIndex = 35;
             this.LogInLink.TabStop = true;
             this.LogInLink.Text = "Log in";
@@ -200,10 +187,10 @@ namespace WriteItOut
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.ClientSize = new System.Drawing.Size(419, 524);
+            this.ClientSize = new System.Drawing.Size(314, 426);
             this.Controls.Add(this.LogInLink);
             this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.logo);
@@ -218,6 +205,8 @@ namespace WriteItOut
             this.Controls.Add(this.PasswordField);
             this.Controls.Add(this.UsernameField);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";

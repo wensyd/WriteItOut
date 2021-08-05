@@ -29,6 +29,7 @@ namespace WriteItOut
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Journal_Search));
             this.CloseBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.IdTxtBox = new System.Windows.Forms.TextBox();
@@ -91,9 +92,9 @@ namespace WriteItOut
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(205, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(537, 481);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
@@ -102,7 +103,7 @@ namespace WriteItOut
             // IdTxtBox
             // 
             this.IdTxtBox.Location = new System.Drawing.Point(107, 25);
-            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdTxtBox.Name = "IdTxtBox";
             this.IdTxtBox.ReadOnly = true;
             this.IdTxtBox.Size = new System.Drawing.Size(60, 20);
@@ -122,7 +123,7 @@ namespace WriteItOut
             // DateTxtBox
             // 
             this.DateTxtBox.Location = new System.Drawing.Point(107, 71);
-            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.DateTxtBox.Name = "DateTxtBox";
             this.DateTxtBox.ReadOnly = true;
             this.DateTxtBox.Size = new System.Drawing.Size(378, 20);
@@ -143,7 +144,7 @@ namespace WriteItOut
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.richTextBox1.Location = new System.Drawing.Point(7, 127);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(516, 340);
             this.richTextBox1.TabIndex = 1;
@@ -152,7 +153,7 @@ namespace WriteItOut
             // TitleTxtBox
             // 
             this.TitleTxtBox.Location = new System.Drawing.Point(107, 48);
-            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.TitleTxtBox.Name = "TitleTxtBox";
             this.TitleTxtBox.ReadOnly = true;
             this.TitleTxtBox.Size = new System.Drawing.Size(378, 20);
@@ -362,9 +363,9 @@ namespace WriteItOut
             this.groupBox2.Controls.Add(this.IdSearchTxtBox);
             this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Location = new System.Drawing.Point(10, 46);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(182, 489);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
@@ -373,7 +374,7 @@ namespace WriteItOut
             // SearchBtn
             // 
             this.SearchBtn.Location = new System.Drawing.Point(118, 107);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(54, 19);
             this.SearchBtn.TabIndex = 3;
@@ -394,7 +395,7 @@ namespace WriteItOut
             // IdSearchTxtBox
             // 
             this.IdSearchTxtBox.Location = new System.Drawing.Point(64, 107);
-            this.IdSearchTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IdSearchTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdSearchTxtBox.Name = "IdSearchTxtBox";
             this.IdSearchTxtBox.Size = new System.Drawing.Size(50, 20);
             this.IdSearchTxtBox.TabIndex = 1;
@@ -403,7 +404,7 @@ namespace WriteItOut
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(4, 135);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(168, 342);
             this.listBox1.TabIndex = 0;
@@ -419,7 +420,8 @@ namespace WriteItOut
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CloseBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Journal_Search";

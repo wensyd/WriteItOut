@@ -49,10 +49,9 @@ namespace WriteItOut
             this.UsernameLbl.AutoSize = true;
             this.UsernameLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
             this.UsernameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.UsernameLbl.Location = new System.Drawing.Point(76, 134);
-            this.UsernameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UsernameLbl.Location = new System.Drawing.Point(57, 109);
             this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(77, 17);
+            this.UsernameLbl.Size = new System.Drawing.Size(58, 13);
             this.UsernameLbl.TabIndex = 21;
             this.UsernameLbl.Text = "Username:";
             // 
@@ -61,10 +60,9 @@ namespace WriteItOut
             this.PasswordLbl.AutoSize = true;
             this.PasswordLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
             this.PasswordLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(207)))), ((int)(((byte)(208)))));
-            this.PasswordLbl.Location = new System.Drawing.Point(76, 211);
-            this.PasswordLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PasswordLbl.Location = new System.Drawing.Point(57, 171);
             this.PasswordLbl.Name = "PasswordLbl";
-            this.PasswordLbl.Size = new System.Drawing.Size(73, 17);
+            this.PasswordLbl.Size = new System.Drawing.Size(56, 13);
             this.PasswordLbl.TabIndex = 20;
             this.PasswordLbl.Text = "Password:";
             // 
@@ -73,10 +71,9 @@ namespace WriteItOut
             this.CreateNewAcctBtn.BackColor = System.Drawing.SystemColors.Control;
             this.CreateNewAcctBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateNewAcctBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.CreateNewAcctBtn.Location = new System.Drawing.Point(76, 348);
-            this.CreateNewAcctBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CreateNewAcctBtn.Location = new System.Drawing.Point(57, 283);
             this.CreateNewAcctBtn.Name = "CreateNewAcctBtn";
-            this.CreateNewAcctBtn.Size = new System.Drawing.Size(267, 38);
+            this.CreateNewAcctBtn.Size = new System.Drawing.Size(200, 31);
             this.CreateNewAcctBtn.TabIndex = 19;
             this.CreateNewAcctBtn.Text = "Create New Account";
             this.CreateNewAcctBtn.UseVisualStyleBackColor = false;
@@ -87,10 +84,9 @@ namespace WriteItOut
             this.SignInBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.SignInBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignInBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.SignInBtn.Location = new System.Drawing.Point(76, 302);
-            this.SignInBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.SignInBtn.Location = new System.Drawing.Point(57, 245);
             this.SignInBtn.Name = "SignInBtn";
-            this.SignInBtn.Size = new System.Drawing.Size(267, 38);
+            this.SignInBtn.Size = new System.Drawing.Size(200, 31);
             this.SignInBtn.TabIndex = 18;
             this.SignInBtn.Text = "Sign In";
             this.SignInBtn.UseVisualStyleBackColor = false;
@@ -99,19 +95,17 @@ namespace WriteItOut
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(76, 260);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(57, 211);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 1);
+            this.panel2.Size = new System.Drawing.Size(200, 1);
             this.panel2.TabIndex = 17;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(207)))), ((int)(((byte)(208)))));
-            this.panel1.Location = new System.Drawing.Point(76, 183);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(57, 149);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 1);
+            this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 16;
             // 
             // PasswordTxtBox
@@ -120,11 +114,10 @@ namespace WriteItOut
             this.PasswordTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTxtBox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTxtBox.ForeColor = System.Drawing.Color.White;
-            this.PasswordTxtBox.Location = new System.Drawing.Point(76, 234);
-            this.PasswordTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PasswordTxtBox.Location = new System.Drawing.Point(57, 190);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.PasswordChar = '*';
-            this.PasswordTxtBox.Size = new System.Drawing.Size(321, 20);
+            this.PasswordTxtBox.Size = new System.Drawing.Size(241, 16);
             this.PasswordTxtBox.TabIndex = 15;
             this.PasswordTxtBox.UseSystemPasswordChar = true;
             // 
@@ -134,20 +127,18 @@ namespace WriteItOut
             this.UsernameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTxtBox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTxtBox.ForeColor = System.Drawing.Color.White;
-            this.UsernameTxtBox.Location = new System.Drawing.Point(76, 157);
-            this.UsernameTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.UsernameTxtBox.Location = new System.Drawing.Point(57, 128);
             this.UsernameTxtBox.Name = "UsernameTxtBox";
-            this.UsernameTxtBox.Size = new System.Drawing.Size(321, 20);
+            this.UsernameTxtBox.Size = new System.Drawing.Size(241, 16);
             this.UsernameTxtBox.TabIndex = 14;
             // 
             // CloseBtn
             // 
             this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
-            this.CloseBtn.Location = new System.Drawing.Point(380, 13);
-            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseBtn.Location = new System.Drawing.Point(285, 11);
             this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
+            this.CloseBtn.Size = new System.Drawing.Size(21, 31);
             this.CloseBtn.TabIndex = 24;
             this.CloseBtn.UseVisualStyleBackColor = true;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
@@ -156,10 +147,9 @@ namespace WriteItOut
             // 
             this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinimizeBtn.Image = global::WriteItOut.Properties.Resources.minimize_icon3;
-            this.MinimizeBtn.Location = new System.Drawing.Point(350, 13);
-            this.MinimizeBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBtn.Location = new System.Drawing.Point(262, 11);
             this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(28, 38);
+            this.MinimizeBtn.Size = new System.Drawing.Size(21, 31);
             this.MinimizeBtn.TabIndex = 23;
             this.MinimizeBtn.UseVisualStyleBackColor = true;
             this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
@@ -168,19 +158,18 @@ namespace WriteItOut
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.Location = new System.Drawing.Point(13, 13);
-            this.logo.Margin = new System.Windows.Forms.Padding(4);
+            this.logo.Location = new System.Drawing.Point(10, 11);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(85, 79);
+            this.logo.Size = new System.Drawing.Size(64, 64);
             this.logo.TabIndex = 22;
             this.logo.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(61)))), ((int)(((byte)(96)))));
-            this.ClientSize = new System.Drawing.Size(419, 524);
+            this.ClientSize = new System.Drawing.Size(314, 426);
             this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.MinimizeBtn);
             this.Controls.Add(this.logo);
@@ -193,6 +182,8 @@ namespace WriteItOut
             this.Controls.Add(this.PasswordTxtBox);
             this.Controls.Add(this.UsernameTxtBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login ";
