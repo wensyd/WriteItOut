@@ -32,7 +32,16 @@ namespace WriteItOut
 
         private void ChallengeBtn_Click(object sender, EventArgs e)
         {
-            challengeArray();
+            try
+            {
+                challengeArray();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error; " + ex.ToString());
+            }
+            
         }
 
         public void challengeArray()

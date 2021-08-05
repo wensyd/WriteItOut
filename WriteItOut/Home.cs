@@ -63,5 +63,10 @@ namespace WriteItOut
             Journal_Search journal_Search = new Journal_Search();
             journal_Search.Show();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

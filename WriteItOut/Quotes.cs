@@ -34,7 +34,16 @@ namespace WriteItOut
 
         private void QuoteBtn_Click(object sender, EventArgs e)
         {
-            quoteArray();
+            try
+            {
+                quoteArray();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error; " + ex.ToString());
+            }
+            
         }
 
         public void quoteArray()

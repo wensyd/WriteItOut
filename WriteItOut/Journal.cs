@@ -101,52 +101,70 @@ namespace WriteItOut
 
         private void NewBtn_Click(object sender, EventArgs e)
         {
-            this.groupBox1.Enabled = true;
-            this.NewBtn.Enabled = false;
-            this.SaveBtn.Enabled = true;
+            try
+            {
+                this.groupBox1.Enabled = true;
+                this.NewBtn.Enabled = false;
+                this.SaveBtn.Enabled = true;
 
-            //--------------------------------
+                //--------------------------------
 
-            Int32 i;
-            i = WriteItOut.Properties.Settings.Default.last_journal_id + 0;
-            this.IdTxtBox.Text = i.ToString();
+                Int32 i;
+                i = WriteItOut.Properties.Settings.Default.last_journal_id + 0;
+                this.IdTxtBox.Text = i.ToString();
 
-            //---------------------------------
+                //---------------------------------
 
-            this.TitleTxtBox.Text = "";
-            this.DateTxtBox.ResetText();
-            this.richTextBox1.Text = ""; 
+                this.TitleTxtBox.Text = "";
+                this.DateTxtBox.ResetText();
+                this.richTextBox1.Text = "";
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error; " + ex.ToString());
+            }
+           
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            this.groupBox1.Enabled = false;
-            this.SaveBtn.Enabled = false;
-            this.NewBtn.Enabled = true;
+            try
+            {
+                this.groupBox1.Enabled = false;
+                this.SaveBtn.Enabled = false;
+                this.NewBtn.Enabled = true;
 
-            //---------------------------------
-            Int32 last_id;
-            last_id = WriteItOut.Properties.Settings.Default.last_journal_id;
-            last_id = last_id + 1;
-            //--------------------------------
-            WriteItOut.Properties.Settings.Default.last_journal_id = last_id;
-            WriteItOut.Properties.Settings.Default.Save();
-            //---------------------------------
-            string fn;
-            string fn_title;
-            string fn_date;
-            fn = Application.StartupPath + "\\data\\docs\\" + last_id.ToString() + ".rtf";
-            fn_title = Application.StartupPath + "\\data\\docs\\title_" + last_id.ToString() + ".txt";
-            fn_date = Application.StartupPath + "\\data\\docs\\date_" + last_id.ToString() + ".txt";
-            //-----------------------------------
-            System.IO.File.WriteAllText(fn_title, this.TitleTxtBox.Text, Encoding.UTF8);
-            System.IO.File.WriteAllText(fn_date, this.DateTxtBox.Text, Encoding.UTF8);
+                //---------------------------------
+                Int32 last_id;
+                last_id = WriteItOut.Properties.Settings.Default.last_journal_id;
+                last_id = last_id + 1;
+                //--------------------------------
+                WriteItOut.Properties.Settings.Default.last_journal_id = last_id;
+                WriteItOut.Properties.Settings.Default.Save();
+                //---------------------------------
+                string fn;
+                string fn_title;
+                string fn_date;
+                fn = Application.StartupPath + "\\data\\docs\\" + last_id.ToString() + ".rtf";
+                fn_title = Application.StartupPath + "\\data\\docs\\title_" + last_id.ToString() + ".txt";
+                fn_date = Application.StartupPath + "\\data\\docs\\date_" + last_id.ToString() + ".txt";
+                //-----------------------------------
+                System.IO.File.WriteAllText(fn_title, this.TitleTxtBox.Text, Encoding.UTF8);
+                System.IO.File.WriteAllText(fn_date, this.DateTxtBox.Text, Encoding.UTF8);
 
 
 
-            //------------------------------------
-            this.richTextBox1.SaveFile(fn);
-            MessageBox.Show("Your entry is saved!");
+                //------------------------------------
+                this.richTextBox1.SaveFile(fn);
+                MessageBox.Show("Your entry is saved!");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error; " + ex.ToString());
+            }
+            
         }
 
         private void ResetBtn_Click(object sender, EventArgs e)

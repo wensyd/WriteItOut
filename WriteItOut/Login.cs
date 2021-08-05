@@ -35,10 +35,18 @@ namespace WriteItOut
 
         private void Login_Load(object sender, EventArgs e)
         {
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=
+                DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
+                con.Open();
+            }
 
-            SqlConnection con = new SqlConnection(@"Data Source=
-            DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
-            con.Open();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error; " + ex.ToString());
+            }
+            
         }
 
         private void CreateNewAcctBtn_Click(object sender, EventArgs e)
@@ -51,35 +59,47 @@ namespace WriteItOut
 
         private void SignInBtn_Click(object sender, EventArgs e)
         {
-            if (PasswordTxtBox.Text != string.Empty || UsernameTxtBox.Text != string.Empty)
+
+            try
             {
-                SqlCommand cmd = new SqlCommand();
-                SqlConnection con = new SqlConnection(@"Data Source=
-            DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
-                con.Open();
-                cmd = new SqlCommand("select * from Login where username='" + UsernameTxtBox.Text + "' and password='" + PasswordTxtBox.Text + "'", con);
-                SqlDataReader  dr= cmd.ExecuteReader();
-                
-                if (dr.Read())
+                if (PasswordTxtBox.Text != string.Empty || UsernameTxtBox.Text != string.Empty)
                 {
-                    dr.Close();
-                    this.Hide();
-                    Home Home = new Home();
-                    Home.ShowDialog();
+                    SqlCommand cmd = new SqlCommand();
+                    SqlConnection con = new SqlConnection(@"Data Source=
+                    DESKTOP-4S8A66J\SQLEXPRESS;Initial Catalog=Wlogin;Integrated Security=True");
+                    con.Open();
+                    cmd = new SqlCommand("select * from Login where username='" + UsernameTxtBox.Text + "' and password='" + PasswordTxtBox.Text + "'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        dr.Close();
+                        this.Hide();
+                        Home Home = new Home();
+                        Home.ShowDialog();
+                    }
+
+                    else
+                    {
+                        dr.Close();
+                        MessageBox.Show("Account is not available with this username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
 
-                else
-                {
-                    dr.Close();
-                    MessageBox.Show("Account is not available with this username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password");
+                    }
             }
 
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid Username or Password");
+                MessageBox.Show("Error; " + ex.ToString());
             }
+
+
+            
 
         }
     }
