@@ -19,6 +19,8 @@ namespace WriteItOut
 
         private void Journal_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.Journal_Entries' table. You can move, or remove it, as needed.
+            this.journal_EntriesTableAdapter.Fill(this.dataSet1.Journal_Entries);
             this.groupBox1.Enabled = false;
             this.SaveBtn.Enabled = false;
         }
@@ -33,144 +35,101 @@ namespace WriteItOut
         private void FontBtn_Click(object sender, EventArgs e)
         {
             this.fontDialog1.ShowDialog();
-            this.richTextBox1.SelectionFont = this.fontDialog1.Font;
+            this.entry_RichTextBox.SelectionFont = this.fontDialog1.Font;
         }
 
         private void ForeColorBtn_Click(object sender, EventArgs e)
         {
             this.colorDialog1.ShowDialog();
-            this.richTextBox1.SelectionColor = this.colorDialog1.Color;
+            this.entry_RichTextBox.SelectionColor = this.colorDialog1.Color;
         }
 
         private void BackColorBtn_Click(object sender, EventArgs e)
         {
             this.colorDialog1.ShowDialog();
-            this.richTextBox1.SelectionBackColor = this.colorDialog1.Color;
+            this.entry_RichTextBox.SelectionBackColor = this.colorDialog1.Color;
         }
 
         private void leftAlignBtn_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+            this.entry_RichTextBox.SelectionAlignment = HorizontalAlignment.Left;
         }
 
         private void CenterAlignBtn_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+            this.entry_RichTextBox.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         private void RightAlignBtn_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+            this.entry_RichTextBox.SelectionAlignment = HorizontalAlignment.Right;
         }
 
         private void decreaseIndentBtn_Click(object sender, EventArgs e)
         {
             Int32 i;
-            i = this.richTextBox1.SelectionIndent;
+            i = this.entry_RichTextBox.SelectionIndent;
             i = i - 10;
-            this.richTextBox1.SelectionIndent = i;
+            this.entry_RichTextBox.SelectionIndent = i;
         }
 
         private void IncreaseIndentBtn_Click(object sender, EventArgs e)
         {
             Int32 i;
-            i = this.richTextBox1.SelectionIndent;
+            i = this.entry_RichTextBox.SelectionIndent;
             i = i + 10;
-            this.richTextBox1.SelectionIndent = i;
+            this.entry_RichTextBox.SelectionIndent = i;
         }
 
         private void copyBtn_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.Copy();
+            this.entry_RichTextBox.Copy();
         }
 
         private void pasteBtn_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.Paste();
+            this.entry_RichTextBox.Paste();
         }
 
         private void undoBtn_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.Undo();
+            this.entry_RichTextBox.Undo();
         }
 
         private void redoBtn_Click(object sender, EventArgs e)
         {
-            this.richTextBox1.Redo();
-        }
-
-        private void NewBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.groupBox1.Enabled = true;
-                this.NewBtn.Enabled = false;
-                this.SaveBtn.Enabled = true;
-
-                //--------------------------------
-
-                Int32 i;
-                i = WriteItOut.Properties.Settings.Default.last_journal_id + 0;
-                this.IdTxtBox.Text = i.ToString();
-
-                //---------------------------------
-
-                this.TitleTxtBox.Text = "";
-                this.DateTxtBox.ResetText();
-                this.richTextBox1.Text = "";
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error; " + ex.ToString());
-            }
-           
-        }
-
-        private void SaveBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.groupBox1.Enabled = false;
-                this.SaveBtn.Enabled = false;
-                this.NewBtn.Enabled = true;
-
-                //---------------------------------
-                Int32 last_id;
-                last_id = WriteItOut.Properties.Settings.Default.last_journal_id;
-                last_id = last_id + 1;
-                //--------------------------------
-                WriteItOut.Properties.Settings.Default.last_journal_id = last_id;
-                WriteItOut.Properties.Settings.Default.Save();
-                //---------------------------------
-                string fn;
-                string fn_title;
-                string fn_date;
-                fn = Application.StartupPath + "\\data\\docs\\" + last_id.ToString() + ".rtf";
-                fn_title = Application.StartupPath + "\\data\\docs\\title_" + last_id.ToString() + ".txt";
-                fn_date = Application.StartupPath + "\\data\\docs\\date_" + last_id.ToString() + ".txt";
-                //-----------------------------------
-                System.IO.File.WriteAllText(fn_title, this.TitleTxtBox.Text, Encoding.UTF8);
-                System.IO.File.WriteAllText(fn_date, this.DateTxtBox.Text, Encoding.UTF8);
-
-
-
-                //------------------------------------
-                this.richTextBox1.SaveFile(fn);
-                MessageBox.Show("Your entry is saved!");
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error; " + ex.ToString());
-            }
-            
+            this.entry_RichTextBox.Redo();
         }
 
         private void ResetBtn_Click(object sender, EventArgs e)
         {
             WriteItOut.Properties.Settings.Default.last_journal_id = 0;
             WriteItOut.Properties.Settings.Default.Save();
+        }
+
+        private void journal_EntriesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.groupBox1.Enabled = false;
+            this.SaveBtn.Enabled = false;
+            this.NewEntryBtn.Enabled = true;
+
+            this.Validate();
+            this.journal_EntriesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet1);
+            MessageBox.Show("Your Entry is saved!");
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            this.groupBox1.Enabled = true;
+            this.NewEntryBtn.Enabled = false;
+            this.SaveBtn.Enabled = true;
+
+
+
+            this.entry_Title_TextBox.Text = "";
+            this.entry_Date_DateTimePicker.ResetText();
+            this.entry_RichTextBox.Text = "";
         }
     }
 }

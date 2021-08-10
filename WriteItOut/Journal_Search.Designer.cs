@@ -29,448 +29,357 @@ namespace WriteItOut
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Journal_Search));
-            this.CloseBtn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.IdTxtBox = new System.Windows.Forms.TextBox();
-            this.IdLbl = new System.Windows.Forms.Label();
-            this.DateTxtBox = new System.Windows.Forms.TextBox();
-            this.DateLbl = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.TitleTxtBox = new System.Windows.Forms.TextBox();
-            this.TitleLbl = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.FontBtn = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.ForeColorBtn = new System.Windows.Forms.ToolStripButton();
-            this.BackColorBtn = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.leftAlignBtn = new System.Windows.Forms.ToolStripButton();
-            this.CenterAlignBtn = new System.Windows.Forms.ToolStripButton();
-            this.RightAlignBtn = new System.Windows.Forms.ToolStripButton();
+            System.Windows.Forms.Label entry_Id_Label;
+            System.Windows.Forms.Label entry_Title_Label;
+            System.Windows.Forms.Label entry_Date_Label;
+            this.dataSet1 = new WriteItOut.Dataset.DataSet1();
+            this.journal_EntriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.journal_EntriesTableAdapter = new WriteItOut.Dataset.DataSet1TableAdapters.Journal_EntriesTableAdapter();
+            this.tableAdapterManager = new WriteItOut.Dataset.DataSet1TableAdapters.TableAdapterManager();
+            this.journal_EntriesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.journal_EntriesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entry_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.entry_Id_TextBox = new System.Windows.Forms.TextBox();
+            this.entry_Title_TextBox = new System.Windows.Forms.TextBox();
+            this.entry_Date_DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.decreaseIndentBtn = new System.Windows.Forms.ToolStripButton();
-            this.IncreaseIndentBtn = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.copyBtn = new System.Windows.Forms.ToolStripButton();
-            this.pasteBtn = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.undoBtn = new System.Windows.Forms.ToolStripButton();
-            this.redoBtn = new System.Windows.Forms.ToolStripButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.SearchBtn = new System.Windows.Forms.Button();
-            this.IdSearchLbl = new System.Windows.Forms.Label();
-            this.IdSearchTxtBox = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            entry_Id_Label = new System.Windows.Forms.Label();
+            entry_Title_Label = new System.Windows.Forms.Label();
+            entry_Date_Label = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingNavigator)).BeginInit();
+            this.journal_EntriesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // CloseBtn
+            // dataSet1
             // 
-            this.CloseBtn.BackColor = System.Drawing.Color.White;
-            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
-            this.CloseBtn.Location = new System.Drawing.Point(721, 11);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(21, 31);
-            this.CloseBtn.TabIndex = 28;
-            this.CloseBtn.UseVisualStyleBackColor = false;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // groupBox1
+            // journal_EntriesBindingSource
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.IdTxtBox);
-            this.groupBox1.Controls.Add(this.IdLbl);
-            this.groupBox1.Controls.Add(this.DateTxtBox);
-            this.groupBox1.Controls.Add(this.DateLbl);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.TitleTxtBox);
-            this.groupBox1.Controls.Add(this.TitleLbl);
-            this.groupBox1.Controls.Add(this.toolStrip1);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(205, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(537, 481);
-            this.groupBox1.TabIndex = 29;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Journal Details";
+            this.journal_EntriesBindingSource.DataMember = "Journal Entries";
+            this.journal_EntriesBindingSource.DataSource = this.dataSet1;
             // 
-            // IdTxtBox
+            // journal_EntriesTableAdapter
             // 
-            this.IdTxtBox.Location = new System.Drawing.Point(107, 25);
-            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.IdTxtBox.Name = "IdTxtBox";
-            this.IdTxtBox.ReadOnly = true;
-            this.IdTxtBox.Size = new System.Drawing.Size(60, 20);
-            this.IdTxtBox.TabIndex = 6;
+            this.journal_EntriesTableAdapter.ClearBeforeFill = true;
             // 
-            // IdLbl
+            // tableAdapterManager
             // 
-            this.IdLbl.AutoSize = true;
-            this.IdLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLbl.Location = new System.Drawing.Point(46, 25);
-            this.IdLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.IdLbl.Name = "IdLbl";
-            this.IdLbl.Size = new System.Drawing.Size(54, 15);
-            this.IdLbl.TabIndex = 5;
-            this.IdLbl.Text = "Entry ID:";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Journal_EntriesTableAdapter = this.journal_EntriesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = WriteItOut.Dataset.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // DateTxtBox
+            // journal_EntriesBindingNavigator
             // 
-            this.DateTxtBox.Location = new System.Drawing.Point(107, 71);
-            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.DateTxtBox.Name = "DateTxtBox";
-            this.DateTxtBox.ReadOnly = true;
-            this.DateTxtBox.Size = new System.Drawing.Size(378, 20);
-            this.DateTxtBox.TabIndex = 4;
+            this.journal_EntriesBindingNavigator.AddNewItem = null;
+            this.journal_EntriesBindingNavigator.AutoSize = false;
+            this.journal_EntriesBindingNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.journal_EntriesBindingNavigator.BindingSource = this.journal_EntriesBindingSource;
+            this.journal_EntriesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.journal_EntriesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.journal_EntriesBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.journal_EntriesBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.journal_EntriesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorDeleteItem,
+            this.toolStripSeparator1});
+            this.journal_EntriesBindingNavigator.Location = new System.Drawing.Point(3, 2);
+            this.journal_EntriesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.journal_EntriesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.journal_EntriesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.journal_EntriesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.journal_EntriesBindingNavigator.Name = "journal_EntriesBindingNavigator";
+            this.journal_EntriesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.journal_EntriesBindingNavigator.Size = new System.Drawing.Size(1017, 52);
+            this.journal_EntriesBindingNavigator.TabIndex = 29;
+            this.journal_EntriesBindingNavigator.Text = "bindingNavigator1";
             // 
-            // DateLbl
+            // bindingNavigatorMoveFirstItem
             // 
-            this.DateLbl.AutoSize = true;
-            this.DateLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLbl.Location = new System.Drawing.Point(36, 71);
-            this.DateLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DateLbl.Name = "DateLbl";
-            this.DateLbl.Size = new System.Drawing.Size(64, 15);
-            this.DateLbl.TabIndex = 3;
-            this.DateLbl.Text = "Entry Date:";
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 49);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
-            // richTextBox1
+            // bindingNavigatorMovePreviousItem
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox1.Location = new System.Drawing.Point(7, 127);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(516, 340);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 49);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
-            // TitleTxtBox
+            // bindingNavigatorSeparator
             // 
-            this.TitleTxtBox.Location = new System.Drawing.Point(107, 48);
-            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.TitleTxtBox.Name = "TitleTxtBox";
-            this.TitleTxtBox.ReadOnly = true;
-            this.TitleTxtBox.Size = new System.Drawing.Size(378, 20);
-            this.TitleTxtBox.TabIndex = 2;
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 52);
             // 
-            // TitleLbl
+            // bindingNavigatorPositionItem
             // 
-            this.TitleLbl.AutoSize = true;
-            this.TitleLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLbl.Location = new System.Drawing.Point(39, 48);
-            this.TitleLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TitleLbl.Name = "TitleLbl";
-            this.TitleLbl.Size = new System.Drawing.Size(64, 15);
-            this.TitleLbl.TabIndex = 1;
-            this.TitleLbl.Text = "Entry Title:";
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // toolStrip1
+            // bindingNavigatorCountItem
             // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.Lavender;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FontBtn,
-            this.toolStripSeparator3,
-            this.ForeColorBtn,
-            this.BackColorBtn,
-            this.toolStripSeparator2,
-            this.leftAlignBtn,
-            this.CenterAlignBtn,
-            this.RightAlignBtn,
-            this.toolStripSeparator1,
-            this.decreaseIndentBtn,
-            this.IncreaseIndentBtn,
-            this.toolStripSeparator4,
-            this.copyBtn,
-            this.pasteBtn,
-            this.toolStripSeparator5,
-            this.undoBtn,
-            this.redoBtn});
-            this.toolStrip1.Location = new System.Drawing.Point(5, 103);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(512, 28);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.Visible = false;
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 49);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // FontBtn
+            // bindingNavigatorSeparator1
             // 
-            this.FontBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.FontBtn.Image = global::WriteItOut.Properties.Resources.fontIcon;
-            this.FontBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.FontBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.FontBtn.Name = "FontBtn";
-            this.FontBtn.Size = new System.Drawing.Size(23, 25);
-            this.FontBtn.Text = "toolStripButton1";
-            this.FontBtn.ToolTipText = "Font";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 52);
             // 
-            // toolStripSeparator3
+            // bindingNavigatorMoveNextItem
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 49);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
-            // ForeColorBtn
+            // bindingNavigatorMoveLastItem
             // 
-            this.ForeColorBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ForeColorBtn.Image = global::WriteItOut.Properties.Resources.textColorIcon;
-            this.ForeColorBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ForeColorBtn.Name = "ForeColorBtn";
-            this.ForeColorBtn.Size = new System.Drawing.Size(24, 25);
-            this.ForeColorBtn.Text = "toolStripButton2";
-            this.ForeColorBtn.ToolTipText = "Fore Color";
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 49);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // BackColorBtn
+            // bindingNavigatorSeparator2
             // 
-            this.BackColorBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BackColorBtn.Image = global::WriteItOut.Properties.Resources.backColorIcon;
-            this.BackColorBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.BackColorBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BackColorBtn.Name = "BackColorBtn";
-            this.BackColorBtn.Size = new System.Drawing.Size(23, 25);
-            this.BackColorBtn.Text = "toolStripButton1";
-            this.BackColorBtn.ToolTipText = "Text Back Color";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 52);
             // 
-            // toolStripSeparator2
+            // bindingNavigatorDeleteItem
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            this.bindingNavigatorDeleteItem.AutoSize = false;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(92, 49);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // leftAlignBtn
+            // journal_EntriesDataGridView
             // 
-            this.leftAlignBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.leftAlignBtn.Image = global::WriteItOut.Properties.Resources.text_align_left_icon;
-            this.leftAlignBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.leftAlignBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.leftAlignBtn.Name = "leftAlignBtn";
-            this.leftAlignBtn.Size = new System.Drawing.Size(23, 25);
-            this.leftAlignBtn.Text = "toolStripButton1";
-            this.leftAlignBtn.ToolTipText = "Left Align";
+            this.journal_EntriesDataGridView.AutoGenerateColumns = false;
+            this.journal_EntriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.journal_EntriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.journal_EntriesDataGridView.DataSource = this.journal_EntriesBindingSource;
+            this.journal_EntriesDataGridView.Location = new System.Drawing.Point(3, 330);
+            this.journal_EntriesDataGridView.Name = "journal_EntriesDataGridView";
+            this.journal_EntriesDataGridView.RowHeadersWidth = 51;
+            this.journal_EntriesDataGridView.RowTemplate.Height = 24;
+            this.journal_EntriesDataGridView.Size = new System.Drawing.Size(555, 345);
+            this.journal_EntriesDataGridView.TabIndex = 29;
             // 
-            // CenterAlignBtn
+            // dataGridViewTextBoxColumn1
             // 
-            this.CenterAlignBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CenterAlignBtn.Image = global::WriteItOut.Properties.Resources.text_align_center_icon;
-            this.CenterAlignBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CenterAlignBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CenterAlignBtn.Name = "CenterAlignBtn";
-            this.CenterAlignBtn.Size = new System.Drawing.Size(23, 25);
-            this.CenterAlignBtn.Text = "toolStripButton2";
-            this.CenterAlignBtn.ToolTipText = "Center Align";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Entry_Id:";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Entry_Id:";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // RightAlignBtn
+            // dataGridViewTextBoxColumn2
             // 
-            this.RightAlignBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.RightAlignBtn.Image = global::WriteItOut.Properties.Resources.text_align_right_icon;
-            this.RightAlignBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.RightAlignBtn.Name = "RightAlignBtn";
-            this.RightAlignBtn.Size = new System.Drawing.Size(24, 25);
-            this.RightAlignBtn.Text = "toolStripButton3";
-            this.RightAlignBtn.ToolTipText = "Right Align";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Entry_Title:";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Entry_Title:";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Entry_Date:";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Entry_Date:";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Entry:";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Entry:";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // entry_RichTextBox
+            // 
+            this.entry_RichTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journal_EntriesBindingSource, "Entry:", true));
+            this.entry_RichTextBox.Location = new System.Drawing.Point(564, 63);
+            this.entry_RichTextBox.Name = "entry_RichTextBox";
+            this.entry_RichTextBox.Size = new System.Drawing.Size(464, 612);
+            this.entry_RichTextBox.TabIndex = 30;
+            this.entry_RichTextBox.Text = "";
+            // 
+            // entry_Id_Label
+            // 
+            entry_Id_Label.AutoSize = true;
+            entry_Id_Label.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            entry_Id_Label.Location = new System.Drawing.Point(42, 120);
+            entry_Id_Label.Name = "entry_Id_Label";
+            entry_Id_Label.Size = new System.Drawing.Size(68, 19);
+            entry_Id_Label.TabIndex = 30;
+            entry_Id_Label.Text = "Entry Id:";
+            // 
+            // entry_Id_TextBox
+            // 
+            this.entry_Id_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journal_EntriesBindingSource, "Entry_Id:", true));
+            this.entry_Id_TextBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entry_Id_TextBox.Location = new System.Drawing.Point(118, 112);
+            this.entry_Id_TextBox.Name = "entry_Id_TextBox";
+            this.entry_Id_TextBox.Size = new System.Drawing.Size(100, 27);
+            this.entry_Id_TextBox.TabIndex = 31;
+            // 
+            // entry_Title_Label
+            // 
+            entry_Title_Label.AutoSize = true;
+            entry_Title_Label.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            entry_Title_Label.Location = new System.Drawing.Point(26, 152);
+            entry_Title_Label.Name = "entry_Title_Label";
+            entry_Title_Label.Size = new System.Drawing.Size(86, 19);
+            entry_Title_Label.TabIndex = 31;
+            entry_Title_Label.Text = "Entry Title:";
+            // 
+            // entry_Title_TextBox
+            // 
+            this.entry_Title_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journal_EntriesBindingSource, "Entry_Title:", true));
+            this.entry_Title_TextBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entry_Title_TextBox.Location = new System.Drawing.Point(118, 144);
+            this.entry_Title_TextBox.Name = "entry_Title_TextBox";
+            this.entry_Title_TextBox.Size = new System.Drawing.Size(364, 27);
+            this.entry_Title_TextBox.TabIndex = 32;
+            // 
+            // entry_Date_Label
+            // 
+            entry_Date_Label.AutoSize = true;
+            entry_Date_Label.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            entry_Date_Label.Location = new System.Drawing.Point(23, 184);
+            entry_Date_Label.Name = "entry_Date_Label";
+            entry_Date_Label.Size = new System.Drawing.Size(87, 19);
+            entry_Date_Label.TabIndex = 32;
+            entry_Date_Label.Text = "Entry Date:";
+            // 
+            // entry_Date_DateTimePicker
+            // 
+            this.entry_Date_DateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.journal_EntriesBindingSource, "Entry_Date:", true));
+            this.entry_Date_DateTimePicker.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entry_Date_DateTimePicker.Location = new System.Drawing.Point(118, 176);
+            this.entry_Date_DateTimePicker.Name = "entry_Date_DateTimePicker";
+            this.entry_Date_DateTimePicker.Size = new System.Drawing.Size(364, 27);
+            this.entry_Date_DateTimePicker.TabIndex = 33;
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
-            // 
-            // decreaseIndentBtn
-            // 
-            this.decreaseIndentBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.decreaseIndentBtn.Image = global::WriteItOut.Properties.Resources.indent_decrease_16_icon;
-            this.decreaseIndentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.decreaseIndentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.decreaseIndentBtn.Name = "decreaseIndentBtn";
-            this.decreaseIndentBtn.Size = new System.Drawing.Size(23, 25);
-            this.decreaseIndentBtn.Text = "toolStripButton4";
-            this.decreaseIndentBtn.ToolTipText = "Decrease Indent";
-            // 
-            // IncreaseIndentBtn
-            // 
-            this.IncreaseIndentBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.IncreaseIndentBtn.Image = global::WriteItOut.Properties.Resources.indent_increase_16_Icon;
-            this.IncreaseIndentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.IncreaseIndentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.IncreaseIndentBtn.Name = "IncreaseIndentBtn";
-            this.IncreaseIndentBtn.Size = new System.Drawing.Size(23, 25);
-            this.IncreaseIndentBtn.Text = "toolStripButton5";
-            this.IncreaseIndentBtn.ToolTipText = "Increase Indent";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 28);
-            // 
-            // copyBtn
-            // 
-            this.copyBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copyBtn.Image = global::WriteItOut.Properties.Resources.ic_content_copy_48px_Icon_16;
-            this.copyBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.copyBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copyBtn.Name = "copyBtn";
-            this.copyBtn.Size = new System.Drawing.Size(23, 25);
-            this.copyBtn.Text = "toolStripButton1";
-            this.copyBtn.ToolTipText = "Copy";
-            // 
-            // pasteBtn
-            // 
-            this.pasteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pasteBtn.Image = global::WriteItOut.Properties.Resources.pasteIcon;
-            this.pasteBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.pasteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pasteBtn.Name = "pasteBtn";
-            this.pasteBtn.Size = new System.Drawing.Size(23, 25);
-            this.pasteBtn.Text = "toolStripButton1";
-            this.pasteBtn.ToolTipText = "Paste";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 28);
-            // 
-            // undoBtn
-            // 
-            this.undoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.undoBtn.Image = global::WriteItOut.Properties.Resources.Undo_icon;
-            this.undoBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.undoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.undoBtn.Name = "undoBtn";
-            this.undoBtn.Size = new System.Drawing.Size(23, 25);
-            this.undoBtn.Text = "toolStripButton1";
-            this.undoBtn.ToolTipText = "Undo";
-            // 
-            // redoBtn
-            // 
-            this.redoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.redoBtn.Image = global::WriteItOut.Properties.Resources.Redo_Icon;
-            this.redoBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.redoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.redoBtn.Name = "redoBtn";
-            this.redoBtn.Size = new System.Drawing.Size(23, 25);
-            this.redoBtn.Text = "toolStripButton1";
-            this.redoBtn.ToolTipText = "Redo";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.SearchBtn);
-            this.groupBox2.Controls.Add(this.IdSearchLbl);
-            this.groupBox2.Controls.Add(this.IdSearchTxtBox);
-            this.groupBox2.Controls.Add(this.listBox1);
-            this.groupBox2.Location = new System.Drawing.Point(10, 46);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(182, 489);
-            this.groupBox2.TabIndex = 30;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Search";
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.Location = new System.Drawing.Point(118, 107);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(54, 19);
-            this.SearchBtn.TabIndex = 3;
-            this.SearchBtn.Text = "Search";
-            this.SearchBtn.UseVisualStyleBackColor = true;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // IdSearchLbl
-            // 
-            this.IdSearchLbl.AutoSize = true;
-            this.IdSearchLbl.Location = new System.Drawing.Point(2, 111);
-            this.IdSearchLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.IdSearchLbl.Name = "IdSearchLbl";
-            this.IdSearchLbl.Size = new System.Drawing.Size(58, 13);
-            this.IdSearchLbl.TabIndex = 2;
-            this.IdSearchLbl.Text = "Journal ID:";
-            // 
-            // IdSearchTxtBox
-            // 
-            this.IdSearchTxtBox.Location = new System.Drawing.Point(64, 107);
-            this.IdSearchTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.IdSearchTxtBox.Name = "IdSearchTxtBox";
-            this.IdSearchTxtBox.Size = new System.Drawing.Size(50, 20);
-            this.IdSearchTxtBox.TabIndex = 1;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(4, 135);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(168, 342);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 52);
             // 
             // Journal_Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(764, 558);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.CloseBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(1048, 695);
+            this.Controls.Add(entry_Date_Label);
+            this.Controls.Add(this.entry_Date_DateTimePicker);
+            this.Controls.Add(entry_Title_Label);
+            this.Controls.Add(this.entry_Title_TextBox);
+            this.Controls.Add(entry_Id_Label);
+            this.Controls.Add(this.entry_Id_TextBox);
+            this.Controls.Add(this.entry_RichTextBox);
+            this.Controls.Add(this.journal_EntriesDataGridView);
+            this.Controls.Add(this.journal_EntriesBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Journal_Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Journal_Search";
             this.Load += new System.EventHandler(this.Journal_Search_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingNavigator)).EndInit();
+            this.journal_EntriesBindingNavigator.ResumeLayout(false);
+            this.journal_EntriesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button CloseBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox IdTxtBox;
-        private System.Windows.Forms.Label IdLbl;
-        private System.Windows.Forms.TextBox DateTxtBox;
-        private System.Windows.Forms.Label DateLbl;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox TitleTxtBox;
-        private System.Windows.Forms.Label TitleLbl;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton FontBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton ForeColorBtn;
-        private System.Windows.Forms.ToolStripButton BackColorBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton leftAlignBtn;
-        private System.Windows.Forms.ToolStripButton CenterAlignBtn;
-        private System.Windows.Forms.ToolStripButton RightAlignBtn;
+        private Dataset.DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource journal_EntriesBindingSource;
+        private Dataset.DataSet1TableAdapters.Journal_EntriesTableAdapter journal_EntriesTableAdapter;
+        private Dataset.DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator journal_EntriesBindingNavigator;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton decreaseIndentBtn;
-        private System.Windows.Forms.ToolStripButton IncreaseIndentBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton copyBtn;
-        private System.Windows.Forms.ToolStripButton pasteBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton undoBtn;
-        private System.Windows.Forms.ToolStripButton redoBtn;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button SearchBtn;
-        private System.Windows.Forms.Label IdSearchLbl;
-        private System.Windows.Forms.TextBox IdSearchTxtBox;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView journal_EntriesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.RichTextBox entry_RichTextBox;
+        private System.Windows.Forms.TextBox entry_Id_TextBox;
+        private System.Windows.Forms.TextBox entry_Title_TextBox;
+        private System.Windows.Forms.DateTimePicker entry_Date_DateTimePicker;
     }
 }

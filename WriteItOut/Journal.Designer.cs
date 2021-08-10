@@ -29,7 +29,11 @@ namespace WriteItOut
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Journal));
+            System.Windows.Forms.Label entry_Id_Label;
+            System.Windows.Forms.Label entry_Title_Label;
+            System.Windows.Forms.Label entry_Date_Label;
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.FontBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,26 +52,36 @@ namespace WriteItOut
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.undoBtn = new System.Windows.Forms.ToolStripButton();
             this.redoBtn = new System.Windows.Forms.ToolStripButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ResetBtn = new System.Windows.Forms.Button();
-            this.NewBtn = new System.Windows.Forms.Button();
-            this.SaveBtn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.IdTxtBox = new System.Windows.Forms.TextBox();
-            this.IdLbl = new System.Windows.Forms.Label();
-            this.DateTxtBox = new System.Windows.Forms.TextBox();
-            this.DateLbl = new System.Windows.Forms.Label();
-            this.TitleTxtBox = new System.Windows.Forms.TextBox();
-            this.TitleLbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.CloseBtn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.journal_EntriesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.NewEntryBtn = new System.Windows.Forms.ToolStripButton();
+            this.DeleteBtn = new System.Windows.Forms.ToolStripButton();
+            this.SaveBtn = new System.Windows.Forms.ToolStripButton();
+            this.entry_Id_TextBox = new System.Windows.Forms.TextBox();
+            this.entry_Title_TextBox = new System.Windows.Forms.TextBox();
+            this.entry_Date_DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.entry_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.journal_EntriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new WriteItOut.Dataset.DataSet1();
+            this.journal_EntriesTableAdapter = new WriteItOut.Dataset.DataSet1TableAdapters.Journal_EntriesTableAdapter();
+            this.tableAdapterManager = new WriteItOut.Dataset.DataSet1TableAdapters.TableAdapterManager();
+            entry_Id_Label = new System.Windows.Forms.Label();
+            entry_Title_Label = new System.Windows.Forms.Label();
+            entry_Date_Label = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingNavigator)).BeginInit();
+            this.journal_EntriesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -94,9 +108,9 @@ namespace WriteItOut
             this.toolStripSeparator5,
             this.undoBtn,
             this.redoBtn});
-            this.toolStrip1.Location = new System.Drawing.Point(5, 103);
+            this.toolStrip1.Location = new System.Drawing.Point(13, 157);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(512, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(683, 34);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -107,7 +121,7 @@ namespace WriteItOut
             this.FontBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.FontBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.FontBtn.Name = "FontBtn";
-            this.FontBtn.Size = new System.Drawing.Size(23, 25);
+            this.FontBtn.Size = new System.Drawing.Size(29, 31);
             this.FontBtn.Text = "toolStripButton1";
             this.FontBtn.ToolTipText = "Font";
             this.FontBtn.Click += new System.EventHandler(this.FontBtn_Click);
@@ -115,7 +129,7 @@ namespace WriteItOut
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 34);
             // 
             // ForeColorBtn
             // 
@@ -123,7 +137,7 @@ namespace WriteItOut
             this.ForeColorBtn.Image = global::WriteItOut.Properties.Resources.textColorIcon;
             this.ForeColorBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ForeColorBtn.Name = "ForeColorBtn";
-            this.ForeColorBtn.Size = new System.Drawing.Size(24, 25);
+            this.ForeColorBtn.Size = new System.Drawing.Size(29, 31);
             this.ForeColorBtn.Text = "toolStripButton2";
             this.ForeColorBtn.ToolTipText = "Fore Color";
             this.ForeColorBtn.Click += new System.EventHandler(this.ForeColorBtn_Click);
@@ -135,7 +149,7 @@ namespace WriteItOut
             this.BackColorBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.BackColorBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BackColorBtn.Name = "BackColorBtn";
-            this.BackColorBtn.Size = new System.Drawing.Size(23, 25);
+            this.BackColorBtn.Size = new System.Drawing.Size(29, 31);
             this.BackColorBtn.Text = "toolStripButton1";
             this.BackColorBtn.ToolTipText = "Text Back Color";
             this.BackColorBtn.Click += new System.EventHandler(this.BackColorBtn_Click);
@@ -143,7 +157,7 @@ namespace WriteItOut
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 34);
             // 
             // leftAlignBtn
             // 
@@ -152,7 +166,7 @@ namespace WriteItOut
             this.leftAlignBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.leftAlignBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.leftAlignBtn.Name = "leftAlignBtn";
-            this.leftAlignBtn.Size = new System.Drawing.Size(23, 25);
+            this.leftAlignBtn.Size = new System.Drawing.Size(29, 31);
             this.leftAlignBtn.Text = "toolStripButton1";
             this.leftAlignBtn.ToolTipText = "Left Align";
             this.leftAlignBtn.Click += new System.EventHandler(this.leftAlignBtn_Click);
@@ -164,7 +178,7 @@ namespace WriteItOut
             this.CenterAlignBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.CenterAlignBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CenterAlignBtn.Name = "CenterAlignBtn";
-            this.CenterAlignBtn.Size = new System.Drawing.Size(23, 25);
+            this.CenterAlignBtn.Size = new System.Drawing.Size(29, 31);
             this.CenterAlignBtn.Text = "toolStripButton2";
             this.CenterAlignBtn.ToolTipText = "Center Align";
             this.CenterAlignBtn.Click += new System.EventHandler(this.CenterAlignBtn_Click);
@@ -175,7 +189,7 @@ namespace WriteItOut
             this.RightAlignBtn.Image = global::WriteItOut.Properties.Resources.text_align_right_icon;
             this.RightAlignBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RightAlignBtn.Name = "RightAlignBtn";
-            this.RightAlignBtn.Size = new System.Drawing.Size(24, 25);
+            this.RightAlignBtn.Size = new System.Drawing.Size(29, 31);
             this.RightAlignBtn.Text = "toolStripButton3";
             this.RightAlignBtn.ToolTipText = "Right Align";
             this.RightAlignBtn.Click += new System.EventHandler(this.RightAlignBtn_Click);
@@ -183,7 +197,7 @@ namespace WriteItOut
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // decreaseIndentBtn
             // 
@@ -192,7 +206,7 @@ namespace WriteItOut
             this.decreaseIndentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.decreaseIndentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.decreaseIndentBtn.Name = "decreaseIndentBtn";
-            this.decreaseIndentBtn.Size = new System.Drawing.Size(23, 25);
+            this.decreaseIndentBtn.Size = new System.Drawing.Size(29, 31);
             this.decreaseIndentBtn.Text = "toolStripButton4";
             this.decreaseIndentBtn.ToolTipText = "Decrease Indent";
             this.decreaseIndentBtn.Click += new System.EventHandler(this.decreaseIndentBtn_Click);
@@ -204,7 +218,7 @@ namespace WriteItOut
             this.IncreaseIndentBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.IncreaseIndentBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.IncreaseIndentBtn.Name = "IncreaseIndentBtn";
-            this.IncreaseIndentBtn.Size = new System.Drawing.Size(23, 25);
+            this.IncreaseIndentBtn.Size = new System.Drawing.Size(29, 31);
             this.IncreaseIndentBtn.Text = "toolStripButton5";
             this.IncreaseIndentBtn.ToolTipText = "Increase Indent";
             this.IncreaseIndentBtn.Click += new System.EventHandler(this.IncreaseIndentBtn_Click);
@@ -212,7 +226,7 @@ namespace WriteItOut
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 34);
             // 
             // copyBtn
             // 
@@ -221,7 +235,7 @@ namespace WriteItOut
             this.copyBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.copyBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyBtn.Name = "copyBtn";
-            this.copyBtn.Size = new System.Drawing.Size(23, 25);
+            this.copyBtn.Size = new System.Drawing.Size(29, 31);
             this.copyBtn.Text = "toolStripButton1";
             this.copyBtn.ToolTipText = "Copy";
             this.copyBtn.Click += new System.EventHandler(this.copyBtn_Click);
@@ -233,7 +247,7 @@ namespace WriteItOut
             this.pasteBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.pasteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteBtn.Name = "pasteBtn";
-            this.pasteBtn.Size = new System.Drawing.Size(23, 25);
+            this.pasteBtn.Size = new System.Drawing.Size(29, 31);
             this.pasteBtn.Text = "toolStripButton1";
             this.pasteBtn.ToolTipText = "Paste";
             this.pasteBtn.Click += new System.EventHandler(this.pasteBtn_Click);
@@ -241,7 +255,7 @@ namespace WriteItOut
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 34);
             // 
             // undoBtn
             // 
@@ -250,7 +264,7 @@ namespace WriteItOut
             this.undoBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.undoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.undoBtn.Name = "undoBtn";
-            this.undoBtn.Size = new System.Drawing.Size(23, 25);
+            this.undoBtn.Size = new System.Drawing.Size(29, 31);
             this.undoBtn.Text = "toolStripButton1";
             this.undoBtn.ToolTipText = "Undo";
             this.undoBtn.Click += new System.EventHandler(this.undoBtn_Click);
@@ -262,183 +276,208 @@ namespace WriteItOut
             this.redoBtn.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.redoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.redoBtn.Name = "redoBtn";
-            this.redoBtn.Size = new System.Drawing.Size(23, 25);
+            this.redoBtn.Size = new System.Drawing.Size(29, 31);
             this.redoBtn.Text = "toolStripButton1";
             this.redoBtn.ToolTipText = "Redo";
             this.redoBtn.Click += new System.EventHandler(this.redoBtn_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox1.Location = new System.Drawing.Point(7, 136);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(516, 262);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.ResetBtn);
-            this.panel1.Controls.Add(this.NewBtn);
-            this.panel1.Controls.Add(this.SaveBtn);
-            this.panel1.Location = new System.Drawing.Point(66, 62);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 55);
-            this.panel1.TabIndex = 2;
-            // 
-            // ResetBtn
-            // 
-            this.ResetBtn.Location = new System.Drawing.Point(352, 13);
-            this.ResetBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(92, 27);
-            this.ResetBtn.TabIndex = 2;
-            this.ResetBtn.Text = "Reset";
-            this.ResetBtn.UseVisualStyleBackColor = true;
-            this.ResetBtn.Visible = false;
-            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
-            // 
-            // NewBtn
-            // 
-            this.NewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NewBtn.Location = new System.Drawing.Point(7, 13);
-            this.NewBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NewBtn.Name = "NewBtn";
-            this.NewBtn.Size = new System.Drawing.Size(80, 27);
-            this.NewBtn.TabIndex = 1;
-            this.NewBtn.Text = "New Entry";
-            this.NewBtn.UseVisualStyleBackColor = true;
-            this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SaveBtn.Location = new System.Drawing.Point(92, 13);
-            this.SaveBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(85, 27);
-            this.SaveBtn.TabIndex = 0;
-            this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = true;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.IdTxtBox);
-            this.groupBox1.Controls.Add(this.IdLbl);
-            this.groupBox1.Controls.Add(this.DateTxtBox);
-            this.groupBox1.Controls.Add(this.DateLbl);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.TitleTxtBox);
-            this.groupBox1.Controls.Add(this.TitleLbl);
-            this.groupBox1.Controls.Add(this.toolStrip1);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(29, 89);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(533, 408);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Journal Details";
-            // 
-            // IdTxtBox
-            // 
-            this.IdTxtBox.Location = new System.Drawing.Point(107, 25);
-            this.IdTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.IdTxtBox.Name = "IdTxtBox";
-            this.IdTxtBox.ReadOnly = true;
-            this.IdTxtBox.Size = new System.Drawing.Size(60, 20);
-            this.IdTxtBox.TabIndex = 6;
-            // 
-            // IdLbl
-            // 
-            this.IdLbl.AutoSize = true;
-            this.IdLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLbl.Location = new System.Drawing.Point(46, 25);
-            this.IdLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.IdLbl.Name = "IdLbl";
-            this.IdLbl.Size = new System.Drawing.Size(54, 15);
-            this.IdLbl.TabIndex = 5;
-            this.IdLbl.Text = "Entry ID:";
-            // 
-            // DateTxtBox
-            // 
-            this.DateTxtBox.Location = new System.Drawing.Point(107, 71);
-            this.DateTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.DateTxtBox.Name = "DateTxtBox";
-            this.DateTxtBox.Size = new System.Drawing.Size(378, 20);
-            this.DateTxtBox.TabIndex = 4;
-            // 
-            // DateLbl
-            // 
-            this.DateLbl.AutoSize = true;
-            this.DateLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLbl.Location = new System.Drawing.Point(36, 71);
-            this.DateLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DateLbl.Name = "DateLbl";
-            this.DateLbl.Size = new System.Drawing.Size(64, 15);
-            this.DateLbl.TabIndex = 3;
-            this.DateLbl.Text = "Entry Date:";
-            // 
-            // TitleTxtBox
-            // 
-            this.TitleTxtBox.Location = new System.Drawing.Point(107, 48);
-            this.TitleTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.TitleTxtBox.Name = "TitleTxtBox";
-            this.TitleTxtBox.Size = new System.Drawing.Size(378, 20);
-            this.TitleTxtBox.TabIndex = 2;
-            // 
-            // TitleLbl
-            // 
-            this.TitleLbl.AutoSize = true;
-            this.TitleLbl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLbl.Location = new System.Drawing.Point(39, 48);
-            this.TitleLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TitleLbl.Name = "TitleLbl";
-            this.TitleLbl.Size = new System.Drawing.Size(64, 15);
-            this.TitleLbl.TabIndex = 1;
-            this.TitleLbl.Text = "Entry Title:";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.journal_EntriesBindingNavigator);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(35, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(47, 37);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(591, 512);
+            this.panel2.Size = new System.Drawing.Size(787, 629);
             this.panel2.TabIndex = 5;
             // 
-            // CloseBtn
+            // groupBox1
             // 
-            this.CloseBtn.BackColor = System.Drawing.Color.White;
-            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
-            this.CloseBtn.Location = new System.Drawing.Point(631, 11);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(21, 31);
-            this.CloseBtn.TabIndex = 27;
-            this.CloseBtn.UseVisualStyleBackColor = false;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            this.groupBox1.Controls.Add(entry_Id_Label);
+            this.groupBox1.Controls.Add(this.entry_Id_TextBox);
+            this.groupBox1.Controls.Add(entry_Title_Label);
+            this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Controls.Add(this.entry_Title_TextBox);
+            this.groupBox1.Controls.Add(entry_Date_Label);
+            this.groupBox1.Controls.Add(this.entry_Date_DateTimePicker);
+            this.groupBox1.Controls.Add(this.entry_RichTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(39, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(709, 525);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Journal Entry";
+            // 
+            // journal_EntriesBindingNavigator
+            // 
+            this.journal_EntriesBindingNavigator.AddNewItem = this.NewEntryBtn;
+            this.journal_EntriesBindingNavigator.AutoSize = false;
+            this.journal_EntriesBindingNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.journal_EntriesBindingNavigator.BindingSource = this.journal_EntriesBindingSource;
+            this.journal_EntriesBindingNavigator.CountItem = null;
+            this.journal_EntriesBindingNavigator.DeleteItem = this.DeleteBtn;
+            this.journal_EntriesBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.journal_EntriesBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.journal_EntriesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator8,
+            this.NewEntryBtn,
+            this.bindingNavigatorSeparator2,
+            this.DeleteBtn,
+            this.toolStripSeparator6,
+            this.SaveBtn,
+            this.toolStripSeparator7});
+            this.journal_EntriesBindingNavigator.Location = new System.Drawing.Point(6, 8);
+            this.journal_EntriesBindingNavigator.MoveFirstItem = null;
+            this.journal_EntriesBindingNavigator.MoveLastItem = null;
+            this.journal_EntriesBindingNavigator.MoveNextItem = null;
+            this.journal_EntriesBindingNavigator.MovePreviousItem = null;
+            this.journal_EntriesBindingNavigator.Name = "journal_EntriesBindingNavigator";
+            this.journal_EntriesBindingNavigator.PositionItem = null;
+            this.journal_EntriesBindingNavigator.Size = new System.Drawing.Size(777, 42);
+            this.journal_EntriesBindingNavigator.TabIndex = 28;
+            this.journal_EntriesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 42);
+            // 
+            // NewEntryBtn
+            // 
+            this.NewEntryBtn.AutoSize = false;
+            this.NewEntryBtn.Image = ((System.Drawing.Image)(resources.GetObject("NewEntryBtn.Image")));
+            this.NewEntryBtn.Name = "bindingNavigatorAddNewItem";
+            this.NewEntryBtn.RightToLeftAutoMirrorImage = true;
+            this.NewEntryBtn.Size = new System.Drawing.Size(92, 39);
+            this.NewEntryBtn.Text = "New Entry";
+            this.NewEntryBtn.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.AutoSize = false;
+            this.DeleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.Image")));
+            this.DeleteBtn.Name = "bindingNavigatorDeleteItem";
+            this.DeleteBtn.RightToLeftAutoMirrorImage = true;
+            this.DeleteBtn.Size = new System.Drawing.Size(92, 39);
+            this.DeleteBtn.Text = "Delete";
+            // 
+            // SaveBtn
+            // 
+            this.SaveBtn.AutoSize = false;
+            this.SaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("SaveBtn.Image")));
+            this.SaveBtn.Name = "journal_EntriesBindingNavigatorSaveItem";
+            this.SaveBtn.Size = new System.Drawing.Size(92, 39);
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.Click += new System.EventHandler(this.journal_EntriesBindingNavigatorSaveItem_Click);
+            // 
+            // entry_Id_Label
+            // 
+            entry_Id_Label.AutoSize = true;
+            entry_Id_Label.Location = new System.Drawing.Point(52, 46);
+            entry_Id_Label.Name = "entry_Id_Label";
+            entry_Id_Label.Size = new System.Drawing.Size(60, 17);
+            entry_Id_Label.TabIndex = 0;
+            entry_Id_Label.Text = "Entry Id:";
+            // 
+            // entry_Id_TextBox
+            // 
+            this.entry_Id_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journal_EntriesBindingSource, "Entry_Id:", true));
+            this.entry_Id_TextBox.Location = new System.Drawing.Point(137, 43);
+            this.entry_Id_TextBox.Name = "entry_Id_TextBox";
+            this.entry_Id_TextBox.ReadOnly = true;
+            this.entry_Id_TextBox.Size = new System.Drawing.Size(78, 22);
+            this.entry_Id_TextBox.TabIndex = 1;
+            // 
+            // entry_Title_Label
+            // 
+            entry_Title_Label.AutoSize = true;
+            entry_Title_Label.Location = new System.Drawing.Point(52, 74);
+            entry_Title_Label.Name = "entry_Title_Label";
+            entry_Title_Label.Size = new System.Drawing.Size(76, 17);
+            entry_Title_Label.TabIndex = 2;
+            entry_Title_Label.Text = "Entry Title:";
+            // 
+            // entry_Title_TextBox
+            // 
+            this.entry_Title_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journal_EntriesBindingSource, "Entry_Title:", true));
+            this.entry_Title_TextBox.Location = new System.Drawing.Point(137, 71);
+            this.entry_Title_TextBox.Name = "entry_Title_TextBox";
+            this.entry_Title_TextBox.Size = new System.Drawing.Size(558, 22);
+            this.entry_Title_TextBox.TabIndex = 3;
+            // 
+            // entry_Date_Label
+            // 
+            entry_Date_Label.AutoSize = true;
+            entry_Date_Label.Location = new System.Drawing.Point(52, 103);
+            entry_Date_Label.Name = "entry_Date_Label";
+            entry_Date_Label.Size = new System.Drawing.Size(79, 17);
+            entry_Date_Label.TabIndex = 4;
+            entry_Date_Label.Text = "Entry Date:";
+            // 
+            // entry_Date_DateTimePicker
+            // 
+            this.entry_Date_DateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.journal_EntriesBindingSource, "Entry_Date:", true));
+            this.entry_Date_DateTimePicker.Location = new System.Drawing.Point(137, 99);
+            this.entry_Date_DateTimePicker.Name = "entry_Date_DateTimePicker";
+            this.entry_Date_DateTimePicker.Size = new System.Drawing.Size(558, 22);
+            this.entry_Date_DateTimePicker.TabIndex = 5;
+            // 
+            // entry_RichTextBox
+            // 
+            this.entry_RichTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journal_EntriesBindingSource, "Entry:", true));
+            this.entry_RichTextBox.Location = new System.Drawing.Point(13, 194);
+            this.entry_RichTextBox.Name = "entry_RichTextBox";
+            this.entry_RichTextBox.Size = new System.Drawing.Size(682, 307);
+            this.entry_RichTextBox.TabIndex = 7;
+            this.entry_RichTextBox.Text = "";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 42);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 42);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 42);
+            // 
+            // journal_EntriesBindingSource
+            // 
+            this.journal_EntriesBindingSource.DataMember = "Journal Entries";
+            this.journal_EntriesBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // journal_EntriesTableAdapter
+            // 
+            this.journal_EntriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Journal_EntriesTableAdapter = this.journal_EntriesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = WriteItOut.Dataset.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Journal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(662, 574);
-            this.Controls.Add(this.CloseBtn);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(883, 706);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Journal";
@@ -447,10 +486,14 @@ namespace WriteItOut
             this.Load += new System.EventHandler(this.Journal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingNavigator)).EndInit();
+            this.journal_EntriesBindingNavigator.ResumeLayout(false);
+            this.journal_EntriesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,16 +502,6 @@ namespace WriteItOut
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton FontBtn;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button NewBtn;
-        private System.Windows.Forms.Button SaveBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox DateTxtBox;
-        private System.Windows.Forms.Label DateLbl;
-        private System.Windows.Forms.TextBox TitleTxtBox;
-        private System.Windows.Forms.Label TitleLbl;
-        private System.Windows.Forms.Button CloseBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripButton ForeColorBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
@@ -488,8 +521,22 @@ namespace WriteItOut
         private System.Windows.Forms.ToolStripButton redoBtn;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.TextBox IdTxtBox;
-        private System.Windows.Forms.Label IdLbl;
-        private System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private Dataset.DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource journal_EntriesBindingSource;
+        private Dataset.DataSet1TableAdapters.Journal_EntriesTableAdapter journal_EntriesTableAdapter;
+        private Dataset.DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator journal_EntriesBindingNavigator;
+        private System.Windows.Forms.ToolStripButton NewEntryBtn;
+        private System.Windows.Forms.ToolStripButton DeleteBtn;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton SaveBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.TextBox entry_Id_TextBox;
+        private System.Windows.Forms.TextBox entry_Title_TextBox;
+        private System.Windows.Forms.DateTimePicker entry_Date_DateTimePicker;
+        private System.Windows.Forms.RichTextBox entry_RichTextBox;
     }
 }

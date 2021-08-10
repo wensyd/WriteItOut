@@ -34,5 +34,16 @@ namespace WriteItOut.Properties {
                 this["last_journal_id"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4S8A66J\\SQLEXPRESS;Initial Catalog=JournalEntries;Integrated " +
+            "Security=True")]
+        public string JournalEntriesConnectionString {
+            get {
+                return ((string)(this["JournalEntriesConnectionString"]));
+            }
+        }
     }
 }
