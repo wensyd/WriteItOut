@@ -30,10 +30,10 @@ namespace WriteItOut
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Journal));
             System.Windows.Forms.Label entry_Id_Label;
             System.Windows.Forms.Label entry_Title_Label;
             System.Windows.Forms.Label entry_Date_Label;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Journal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.FontBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,36 +53,64 @@ namespace WriteItOut
             this.undoBtn = new System.Windows.Forms.ToolStripButton();
             this.redoBtn = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.journal_EntriesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.NewEntryBtn = new System.Windows.Forms.ToolStripButton();
+            this.journal_EntriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new WriteItOut.Dataset.DataSet1();
             this.DeleteBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.SaveBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.entry_Id_TextBox = new System.Windows.Forms.TextBox();
             this.entry_Title_TextBox = new System.Windows.Forms.TextBox();
             this.entry_Date_DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.entry_RichTextBox = new System.Windows.Forms.RichTextBox();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.journal_EntriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new WriteItOut.Dataset.DataSet1();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.journal_EntriesTableAdapter = new WriteItOut.Dataset.DataSet1TableAdapters.Journal_EntriesTableAdapter();
             this.tableAdapterManager = new WriteItOut.Dataset.DataSet1TableAdapters.TableAdapterManager();
+            this.CloseBtn = new System.Windows.Forms.Button();
             entry_Id_Label = new System.Windows.Forms.Label();
             entry_Title_Label = new System.Windows.Forms.Label();
             entry_Date_Label = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingNavigator)).BeginInit();
             this.journal_EntriesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // entry_Id_Label
+            // 
+            entry_Id_Label.AutoSize = true;
+            entry_Id_Label.Location = new System.Drawing.Point(52, 46);
+            entry_Id_Label.Name = "entry_Id_Label";
+            entry_Id_Label.Size = new System.Drawing.Size(60, 17);
+            entry_Id_Label.TabIndex = 0;
+            entry_Id_Label.Text = "Entry Id:";
+            // 
+            // entry_Title_Label
+            // 
+            entry_Title_Label.AutoSize = true;
+            entry_Title_Label.Location = new System.Drawing.Point(52, 74);
+            entry_Title_Label.Name = "entry_Title_Label";
+            entry_Title_Label.Size = new System.Drawing.Size(76, 17);
+            entry_Title_Label.TabIndex = 2;
+            entry_Title_Label.Text = "Entry Title:";
+            // 
+            // entry_Date_Label
+            // 
+            entry_Date_Label.AutoSize = true;
+            entry_Date_Label.Location = new System.Drawing.Point(52, 103);
+            entry_Date_Label.Name = "entry_Date_Label";
+            entry_Date_Label.Size = new System.Drawing.Size(79, 17);
+            entry_Date_Label.TabIndex = 4;
+            entry_Date_Label.Text = "Entry Date:";
             // 
             // toolStrip1
             // 
@@ -293,23 +321,6 @@ namespace WriteItOut
             this.panel2.Size = new System.Drawing.Size(787, 629);
             this.panel2.TabIndex = 5;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(entry_Id_Label);
-            this.groupBox1.Controls.Add(this.entry_Id_TextBox);
-            this.groupBox1.Controls.Add(entry_Title_Label);
-            this.groupBox1.Controls.Add(this.toolStrip1);
-            this.groupBox1.Controls.Add(this.entry_Title_TextBox);
-            this.groupBox1.Controls.Add(entry_Date_Label);
-            this.groupBox1.Controls.Add(this.entry_Date_DateTimePicker);
-            this.groupBox1.Controls.Add(this.entry_RichTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(39, 79);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(709, 525);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Journal Entry";
-            // 
             // journal_EntriesBindingNavigator
             // 
             this.journal_EntriesBindingNavigator.AddNewItem = this.NewEntryBtn;
@@ -339,47 +350,80 @@ namespace WriteItOut
             this.journal_EntriesBindingNavigator.TabIndex = 28;
             this.journal_EntriesBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 42);
-            // 
             // NewEntryBtn
             // 
             this.NewEntryBtn.AutoSize = false;
             this.NewEntryBtn.Image = ((System.Drawing.Image)(resources.GetObject("NewEntryBtn.Image")));
-            this.NewEntryBtn.Name = "bindingNavigatorAddNewItem";
+            this.NewEntryBtn.Name = "NewEntryBtn";
             this.NewEntryBtn.RightToLeftAutoMirrorImage = true;
             this.NewEntryBtn.Size = new System.Drawing.Size(92, 39);
             this.NewEntryBtn.Text = "New Entry";
             this.NewEntryBtn.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
+            // journal_EntriesBindingSource
+            // 
+            this.journal_EntriesBindingSource.DataMember = "Journal Entries";
+            this.journal_EntriesBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // DeleteBtn
             // 
             this.DeleteBtn.AutoSize = false;
             this.DeleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.Image")));
-            this.DeleteBtn.Name = "bindingNavigatorDeleteItem";
+            this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.RightToLeftAutoMirrorImage = true;
             this.DeleteBtn.Size = new System.Drawing.Size(92, 39);
             this.DeleteBtn.Text = "Delete";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 42);
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 42);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 42);
             // 
             // SaveBtn
             // 
             this.SaveBtn.AutoSize = false;
             this.SaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("SaveBtn.Image")));
-            this.SaveBtn.Name = "journal_EntriesBindingNavigatorSaveItem";
+            this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(92, 39);
             this.SaveBtn.Text = "Save";
             this.SaveBtn.Click += new System.EventHandler(this.journal_EntriesBindingNavigatorSaveItem_Click);
             // 
-            // entry_Id_Label
+            // toolStripSeparator7
             // 
-            entry_Id_Label.AutoSize = true;
-            entry_Id_Label.Location = new System.Drawing.Point(52, 46);
-            entry_Id_Label.Name = "entry_Id_Label";
-            entry_Id_Label.Size = new System.Drawing.Size(60, 17);
-            entry_Id_Label.TabIndex = 0;
-            entry_Id_Label.Text = "Entry Id:";
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 42);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(entry_Id_Label);
+            this.groupBox1.Controls.Add(this.entry_Id_TextBox);
+            this.groupBox1.Controls.Add(entry_Title_Label);
+            this.groupBox1.Controls.Add(this.toolStrip1);
+            this.groupBox1.Controls.Add(this.entry_Title_TextBox);
+            this.groupBox1.Controls.Add(entry_Date_Label);
+            this.groupBox1.Controls.Add(this.entry_Date_DateTimePicker);
+            this.groupBox1.Controls.Add(this.entry_RichTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(39, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(709, 525);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Journal Entry";
             // 
             // entry_Id_TextBox
             // 
@@ -390,15 +434,6 @@ namespace WriteItOut
             this.entry_Id_TextBox.Size = new System.Drawing.Size(78, 22);
             this.entry_Id_TextBox.TabIndex = 1;
             // 
-            // entry_Title_Label
-            // 
-            entry_Title_Label.AutoSize = true;
-            entry_Title_Label.Location = new System.Drawing.Point(52, 74);
-            entry_Title_Label.Name = "entry_Title_Label";
-            entry_Title_Label.Size = new System.Drawing.Size(76, 17);
-            entry_Title_Label.TabIndex = 2;
-            entry_Title_Label.Text = "Entry Title:";
-            // 
             // entry_Title_TextBox
             // 
             this.entry_Title_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journal_EntriesBindingSource, "Entry_Title:", true));
@@ -406,15 +441,6 @@ namespace WriteItOut
             this.entry_Title_TextBox.Name = "entry_Title_TextBox";
             this.entry_Title_TextBox.Size = new System.Drawing.Size(558, 22);
             this.entry_Title_TextBox.TabIndex = 3;
-            // 
-            // entry_Date_Label
-            // 
-            entry_Date_Label.AutoSize = true;
-            entry_Date_Label.Location = new System.Drawing.Point(52, 103);
-            entry_Date_Label.Name = "entry_Date_Label";
-            entry_Date_Label.Size = new System.Drawing.Size(79, 17);
-            entry_Date_Label.TabIndex = 4;
-            entry_Date_Label.Text = "Entry Date:";
             // 
             // entry_Date_DateTimePicker
             // 
@@ -433,31 +459,6 @@ namespace WriteItOut
             this.entry_RichTextBox.TabIndex = 7;
             this.entry_RichTextBox.Text = "";
             // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 42);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 42);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 42);
-            // 
-            // journal_EntriesBindingSource
-            // 
-            this.journal_EntriesBindingSource.DataMember = "Journal Entries";
-            this.journal_EntriesBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // journal_EntriesTableAdapter
             // 
             this.journal_EntriesTableAdapter.ClearBeforeFill = true;
@@ -468,14 +469,27 @@ namespace WriteItOut
             this.tableAdapterManager.Journal_EntriesTableAdapter = this.journal_EntriesTableAdapter;
             this.tableAdapterManager.UpdateOrder = WriteItOut.Dataset.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // CloseBtn
+            // 
+            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBtn.Image = global::WriteItOut.Properties.Resources.Close_icon__2_;
+            this.CloseBtn.Location = new System.Drawing.Point(842, 13);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(28, 38);
+            this.CloseBtn.TabIndex = 25;
+            this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click_1);
+            // 
             // Journal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(883, 706);
+            this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -487,13 +501,13 @@ namespace WriteItOut
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingNavigator)).EndInit();
             this.journal_EntriesBindingNavigator.ResumeLayout(false);
             this.journal_EntriesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journal_EntriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -538,5 +552,6 @@ namespace WriteItOut
         private System.Windows.Forms.TextBox entry_Title_TextBox;
         private System.Windows.Forms.DateTimePicker entry_Date_DateTimePicker;
         private System.Windows.Forms.RichTextBox entry_RichTextBox;
+        private System.Windows.Forms.Button CloseBtn;
     }
 }

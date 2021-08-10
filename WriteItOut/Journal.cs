@@ -131,5 +131,12 @@ namespace WriteItOut
             this.entry_Date_DateTimePicker.ResetText();
             this.entry_RichTextBox.Text = "";
         }
+
+        private void CloseBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.ShowDialog();
+        }
     }
 }
